@@ -1,0 +1,48 @@
+/// <div> HEADER includes NAVIGATION BAR
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // <h1> HEADING BRAND NAME
+  &__brand {
+    font-family: $font-family-2;
+    font-size: 5rem;
+    font-weight: 400;
+
+    @media(max-width: em(1300)) {
+      font-size: 4.4rem;
+    }
+  }
+
+  // <nav> NAVIGATION BAR
+  &__navbar {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media(max-width: $bp-burger) {
+      display: none;
+    }
+  }
+
+  // <a> LINKS
+  &__link {
+    padding: 0.4rem 0.3rem;
+    margin: 0 1.6rem;
+    text-decoration: none;
+    color: $text-color;
+    transition: all .2s $hover-delay;
+    border-top: 2px solid transparent;
+    &:hover {
+      border-top: 2px solid #ff6033;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

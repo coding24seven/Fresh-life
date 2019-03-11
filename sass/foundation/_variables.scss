@@ -1,0 +1,29 @@
+/// css custom properties / variables
+/// <root> pseudo element is the same as <html> but has higher specificity
+:root {
+  // --line: 1px solid var(--color-grey-light-2); // example
+}
+/// sass variables
+//. FONT
+$font-family: 'Raleway', sans-serif;
+$font-family-2: 'Pacifico', cursive;
+$font-size: 62.5%;
+//. COLOR
+$text-color: #262626;
+$creamy-color: #f9f8fb;
+
+//. CONTAINER
+$container-width: 117rem;
+
+//. FRESH LIFE
+$fresh-life-height: 100rem;
+
+//. HOVER DELAY
+$hover-delay: .03s;
+
+//. MEDIA QUERY BREAKPOINTS
+@function em($pixels) {  
+  @return #{$pixels/16}em
+ }
+ //. BURGER
+ $bp-burger: em(900);

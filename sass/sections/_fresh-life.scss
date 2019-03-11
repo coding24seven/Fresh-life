@@ -1,0 +1,80 @@
+/// <section> FRESH LIFE
+.fresh-life {
+	background-color: $creamy-color;
+	@media(max-width: em(900)) {
+
+	}
+
+	//. <div> CONTAINER
+	&__container {
+		position: relative;
+		max-width: $container-width;
+		margin: 0 auto;
+		border-top: 1.5rem solid transparent;
+		border-left: 5rem solid transparent;
+		border-right: 5rem solid transparent;
+	}
+
+	//, <img> IMAGE
+	&__image {
+		display: block;
+		width: 100%;
+	}
+
+	//, <div> BOX FOR THE HEADING, DESCRIPTION, LINK
+	&__text-and-link-box {
+		width: 34%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		@media(max-width: em(900)) {
+			width: 41%;
+			top: 10%;
+			left: 50%;
+			transform: translateX(-50%);
+			text-align: center;
+		}
+	}
+
+	// <h2> HEADING
+	&__heading {
+		font-size: 6rem;
+		font-weight: 800;
+		margin-bottom: 3rem;
+		@media(max-width: em(1300)) {
+			font-size: 4.6rem;
+		}
+		@media(max-width: em(900)) {
+			font-size: 5.7rem;
+		}
+	}
+
+	// <p> DESCRIPTION
+	&__description {
+		font-size: 1.7rem;
+		font-weight: 300;
+		margin-bottom: 4rem;
+	}
+
+	// <a> LINK
+	&__link {
+		display: inline-block;
+		padding: 2rem 2.5rem;
+		font-size: 2rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-decoration: none;
+		background-color: #ff6033;
+		color: white;
+		line-height: 2.7rem;
+		box-shadow: 0px .2rem .5rem rgba(0,0,0,0.5);
+	}
+
+	//, <img> ICON AT THE BOTTOM OF THE SECTION
+	&__icon {
+		position: absolute;
+		bottom: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
