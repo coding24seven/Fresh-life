@@ -1,47 +1,79 @@
 /// <div> HEADER includes NAVIGATION BAR
 .header {
   width: 100%;
-  // margin-bottom: 19.5rem;
-  
+  position: relative;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  // <h1> HEADING BRAND NAME
+  //. <h1> HEADING BRAND NAME
   &__brand {
     font-family: $font-family-2;
     font-size: 5rem;
     font-weight: 400;
+    color: $text-color;
 
     @media(max-width: em(1300)) {
       font-size: 4.4rem;
     }
   }
 
-  // <nav> NAVIGATION BAR
+  //. CHECKBOX FOR NAVIGATION MENU
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked ~ &__navbar {
+    display: flex;
+  }
+
+  //. <nav> NAVIGATION BAR
   &__navbar {
     display: flex;
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+    border-radius: .5rem;
+
     @media(max-width: $bp-burger) {
       display: none;
+      position: absolute;
+      z-index: 666;
+      top: 6rem;
+      right: 0;
+      background-color: $creamy-color;
+      text-align: center;
+      flex-direction: column;
     }
   }
 
-  // <a> LINKS
+  //, <a> LINKS
   &__link {
     padding: 0.4rem 0.3rem;
     margin: 0 1.6rem;
     text-decoration: none;
     color: $text-color;
     transition: all .2s $hover-delay;
-    border-top: 2px solid transparent;
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem solid transparent;
+    @media(max-width: $bp-burger) {
+      margin: 0;
+      padding: .5rem 2rem;
+      box-shadow: 0 .1rem rgb(182, 182, 182);
+    }
     &:hover {
-      border-top: 2px solid #ff6033;
+      // HOVER WHEN IN NAVBAR MODE
+      box-shadow: 0 .1rem transparent;
+      border-top: .2rem solid #ff6033;
+      // HOVER WHEN IN MENU MODE
+      @media(max-width: $bp-burger) {
+        border-top: .2rem solid transparent;
+        border-bottom: .2rem solid #ff6033;
+      }
     }
     &:last-child {
       margin-right: 0;
     }
+
   }
 }

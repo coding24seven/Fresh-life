@@ -1,0 +1,14 @@
+/// <a> LINK CONTAINING ICON AT THE BOTTOM OF THE SECTION
+.mouse-link {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+  text-align: center;
+  
+  //. <img> ICON AT THE BOTTOM OF THE SECTION
+  &__icon {
+
+  }
+}

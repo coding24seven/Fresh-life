@@ -16,29 +16,57 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-/* line 19, sass/foundation/_base.scss */
+/* line 20, sass/foundation/_base.scss */
 body {
   font-family: "Raleway", sans-serif;
   min-height: 100vh;
   color: #262626;
 }
 
-/* line 1, sass/foundation/_container.scss */
+/* line 32, sass/foundation/_base.scss */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* line 38, sass/foundation/_base.scss */
 .container {
   max-width: 117rem;
   margin: 0 auto;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  display: flex;
+}
+
+@media (max-width: 43.75em) {
+  /* line 38, sass/foundation/_base.scss */
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  /* line 38, sass/foundation/_base.scss */
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 /* line 2, sass/components/_burger.scss */
 .burger {
   display: none;
-  transform: translateY(-15%);
+  transform: translate(1rem, -15%);
   position: relative;
   padding: 1rem;
   box-sizing: content-box;
   cursor: pointer;
+  user-select: none;
+  text-decoration: none;
   transition: all .2s .05s;
   flex-direction: column;
   justify-content: space-around;
@@ -51,37 +79,37 @@ body {
   }
 }
 
-/* line 21, sass/components/_burger.scss */
+/* line 25, sass/components/_burger.scss */
 .burger:hover:not(.js-menu-on) > div:nth-child(1) {
   transform: translateY(2px);
 }
 
-/* line 24, sass/components/_burger.scss */
+/* line 28, sass/components/_burger.scss */
 .burger:hover:not(.js-menu-on) > div:nth-child(3) {
   transform: translateY(-2px);
 }
 
-/* line 30, sass/components/_burger.scss */
+/* line 34, sass/components/_burger.scss */
 .burger:hover.js-menu-on {
   transform: scale(1.2);
 }
 
-/* line 36, sass/components/_burger.scss */
+/* line 40, sass/components/_burger.scss */
 .burger.js-menu-on > div:nth-child(1) {
   transform: translateY(9.6px) rotate(135deg);
 }
 
-/* line 39, sass/components/_burger.scss */
+/* line 43, sass/components/_burger.scss */
 .burger.js-menu-on > div:nth-child(2) {
   transform: scale(0);
 }
 
-/* line 42, sass/components/_burger.scss */
+/* line 46, sass/components/_burger.scss */
 .burger.js-menu-on > div:nth-child(3) {
   transform: translateY(-9.6px) rotate(-135deg);
 }
 
-/* line 48, sass/components/_burger.scss */
+/* line 52, sass/components/_burger.scss */
 .burger > div {
   color: #262626;
   line-height: .3;
@@ -89,13 +117,13 @@ body {
   font-weight: 400;
 }
 
-/* line 62, sass/components/_burger.scss */
+/* line 66, sass/components/_burger.scss */
 .burger > div:nth-child(1),
 .burger > div:nth-child(3) {
   transition: all .1s .03s ease-in-out;
 }
 
-/* line 67, sass/components/_burger.scss */
+/* line 71, sass/components/_burger.scss */
 .burger > div:nth-child(2) {
   transition: all .04s .05s;
 }
@@ -103,6 +131,8 @@ body {
 /* line 2, sass/components/_header.scss */
 .header {
   width: 100%;
+  position: relative;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,6 +143,7 @@ body {
   font-family: "Pacifico", cursive;
   font-size: 5rem;
   font-weight: 400;
+  color: #262626;
 }
 
 @media (max-width: 81.25em) {
@@ -122,67 +153,223 @@ body {
   }
 }
 
-/* line 22, sass/components/_header.scss */
+/* line 23, sass/components/_header.scss */
+.header__checkbox {
+  display: none;
+}
+
+/* line 26, sass/components/_header.scss */
+.header__checkbox:checked ~ .header__navbar {
+  display: flex;
+}
+
+/* line 31, sass/components/_header.scss */
 .header__navbar {
   display: flex;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
+  border-radius: .5rem;
 }
 
 @media (max-width: 56.25em) {
-  /* line 22, sass/components/_header.scss */
+  /* line 31, sass/components/_header.scss */
   .header__navbar {
     display: none;
+    position: absolute;
+    z-index: 666;
+    top: 6rem;
+    right: 0;
+    background-color: #f9f8fb;
+    text-align: center;
+    flex-direction: column;
   }
 }
 
-/* line 33, sass/components/_header.scss */
+/* line 51, sass/components/_header.scss */
 .header__link {
   padding: 0.4rem 0.3rem;
   margin: 0 1.6rem;
   text-decoration: none;
   color: #262626;
   transition: all 0.2s 0.03s;
-  border-top: 2px solid transparent;
+  border-top: .2rem solid transparent;
+  border-bottom: .2rem solid transparent;
 }
 
-/* line 40, sass/components/_header.scss */
+@media (max-width: 56.25em) {
+  /* line 51, sass/components/_header.scss */
+  .header__link {
+    margin: 0;
+    padding: .5rem 2rem;
+    box-shadow: 0 0.1rem #b6b6b6;
+  }
+}
+
+/* line 64, sass/components/_header.scss */
 .header__link:hover {
-  border-top: 2px solid #ff6033;
+  box-shadow: 0 .1rem transparent;
+  border-top: .2rem solid #ff6033;
 }
 
-/* line 43, sass/components/_header.scss */
+@media (max-width: 56.25em) {
+  /* line 64, sass/components/_header.scss */
+  .header__link:hover {
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem solid #ff6033;
+  }
+}
+
+/* line 74, sass/components/_header.scss */
 .header__link:last-child {
   margin-right: 0;
 }
 
-/* line 2, sass/sections/_fresh-life.scss */
-.fresh-life {
-  background-color: aqua;
+/* line 2, sass/components/_mouse-link.scss */
+.mouse-link {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+  text-align: center;
 }
 
-/* line 9, sass/sections/_fresh-life.scss */
-.fresh-life__container {
-  background: url(/img/092.jpg) right center no-repeat/cover, yellow;
-  max-width: 117rem;
-  height: 85rem;
-  margin: 0 auto;
-  padding: 1.5rem 8rem 5.5rem;
-  display: flex;
-  flex-direction: column;
+/* line 2, sass/sections/_about.scss */
+.about {
+  background-image: radial-gradient(circle at center, #00c3c3 0%, #00b8b7 32%, #00afae 68%, #009f9f 100%);
+}
+
+/* line 6, sass/sections/_about.scss */
+.about__container {
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   justify-content: space-between;
   align-items: center;
 }
 
-@media (max-width: 62.5em) {
-  /* line 9, sass/sections/_fresh-life.scss */
+@media (max-width: 56.25em) {
+  /* line 6, sass/sections/_about.scss */
+  .about__container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 43.75em) {
+  /* line 6, sass/sections/_about.scss */
+  .about__container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* line 24, sass/sections/_about.scss */
+.about__image {
+  width: 45%;
+  height: 45%;
+  filter: drop-shadow(-1.3794rem 0.684rem 5rem rgba(0, 0, 0, 0.3));
+  margin-right: 10rem;
+}
+
+@media (max-width: 56.25em) {
+  /* line 24, sass/sections/_about.scss */
+  .about__image {
+    width: 65%;
+    height: 65%;
+    margin-top: 4rem;
+    margin-right: 0;
+    order: 2;
+  }
+}
+
+@media (max-width: 31.25em) {
+  /* line 24, sass/sections/_about.scss */
+  .about__image {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+@media (max-width: 22.4375em) {
+  /* line 24, sass/sections/_about.scss */
+  .about__image {
+    width: 88%;
+    height: 88%;
+  }
+}
+
+/* line 47, sass/sections/_about.scss */
+.about__text-box {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f9f8fb;
+}
+
+@media (max-width: 56.25em) {
+  /* line 47, sass/sections/_about.scss */
+  .about__text-box {
+    width: 100%;
+  }
+}
+
+/* line 62, sass/sections/_about.scss */
+.about__heading {
+  margin-bottom: 1rem;
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+@media (max-width: 81.25em) {
+  /* line 62, sass/sections/_about.scss */
+  .about__heading {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  /* line 62, sass/sections/_about.scss */
+  .about__heading {
+    font-size: 5rem;
+    text-align: center;
+  }
+}
+
+/* line 76, sass/sections/_about.scss */
+.about__description {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+/* line 2, sass/sections/_fresh-life.scss */
+.fresh-life {
+  background-color: #f9f8fb;
+}
+
+/* line 8, sass/sections/_fresh-life.scss */
+.fresh-life__container {
+  position: relative;
+  background: url(/img/092.jpg) right center no-repeat/cover;
+  height: 100vh;
+  padding-top: 1.5rem;
+  padding-bottom: 5.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+@media (max-width: 56.25em) {
+  /* line 8, sass/sections/_fresh-life.scss */
   .fresh-life__container {
     background: url("/img/092-cropped.jpg") top center no-repeat/cover;
   }
 }
 
-/* line 29, sass/sections/_fresh-life.scss */
+/* line 22, sass/sections/_fresh-life.scss */
 .fresh-life__text-and-link-box {
   width: 34%;
   align-self: flex-start;
@@ -191,44 +378,59 @@ body {
   align-items: flex-start;
 }
 
-@media (max-width: 62.5em) {
-  /* line 29, sass/sections/_fresh-life.scss */
+@media (max-width: 56.25em) {
+  /* line 22, sass/sections/_fresh-life.scss */
   .fresh-life__text-and-link-box {
     width: 100%;
     align-self: center;
-    transform: translateY(-16rem);
+    transform: translateY(-6rem);
   }
 }
 
-/* line 45, sass/sections/_fresh-life.scss */
+@media (max-width: 31.25em) {
+  /* line 22, sass/sections/_fresh-life.scss */
+  .fresh-life__text-and-link-box {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* line 41, sass/sections/_fresh-life.scss */
 .fresh-life__heading {
   font-size: 6rem;
   font-weight: 800;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 81.25em) {
-  /* line 45, sass/sections/_fresh-life.scss */
+  /* line 41, sass/sections/_fresh-life.scss */
   .fresh-life__heading {
     font-size: 4.6rem;
   }
 }
 
-@media (max-width: 56.25em) {
-  /* line 45, sass/sections/_fresh-life.scss */
+@media (max-width: 31.25em) {
+  /* line 41, sass/sections/_fresh-life.scss */
   .fresh-life__heading {
-    font-size: 5.7rem;
+    margin-bottom: 3rem;
   }
 }
 
-/* line 58, sass/sections/_fresh-life.scss */
+/* line 54, sass/sections/_fresh-life.scss */
 .fresh-life__description {
+  margin-bottom: 3.7rem;
   font-size: 1.7rem;
   font-weight: 300;
-  margin-bottom: 4rem;
 }
 
-/* line 71, sass/sections/_fresh-life.scss */
+@media (max-width: 31.25em) {
+  /* line 54, sass/sections/_fresh-life.scss */
+  .fresh-life__description {
+    margin-bottom: 4.7rem;
+  }
+}
+
+/* line 67, sass/sections/_fresh-life.scss */
 .fresh-life__link {
   display: inline-block;
   padding: 1.5rem 2.2rem;
@@ -242,21 +444,16 @@ body {
   box-shadow: 0px 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 62.5em) {
-  /* line 71, sass/sections/_fresh-life.scss */
+@media (max-width: 56.25em) {
+  /* line 67, sass/sections/_fresh-life.scss */
   .fresh-life__link {
     align-self: flex-end;
   }
 }
 
-@media (max-width: 43.75em) {
-  /* line 71, sass/sections/_fresh-life.scss */
+@media (max-width: 31.25em) {
+  /* line 67, sass/sections/_fresh-life.scss */
   .fresh-life__link {
-    transform: translateY(30rem);
+    align-self: auto;
   }
-}
-
-/* line 91, sass/sections/_fresh-life.scss */
-.fresh-life__icon {
-  bottom: 3rem;
 }

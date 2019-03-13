@@ -1,17 +1,21 @@
-//. <a> BURGER LINK
+//. <div> || <a> || <label> BURGER LINK
 .burger {
   display: none;
-  transform: translateY(-15%); // lift the burger a bit
-  // width and height are for 'background-lines' version of burger
+  transform: translate(1rem, -15%); // lift the burger a bit
+  // width and height below are for 'background-lines' version of burger
   // width: 3rem;
   // height: 2.13rem;
   position: relative;
   padding: 1rem;
   box-sizing: content-box;
   cursor: pointer;
+  user-select: none;
+  text-decoration: none;
   transition: all .2s .05s;
   flex-direction: column;
   justify-content: space-around;
+
+
   @media(max-width: $bp-burger) {
     display: flex;
   }
@@ -46,7 +50,7 @@
 
   //, <div> all bars of hamburger
   &>div {
-    // width and height are for 'background-lines' version of burger
+    // width and height below are for 'background-lines' version of burger
     // width: 3rem;
     // height: .2rem;
     // background-color: $text-color;

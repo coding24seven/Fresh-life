@@ -16,11 +16,15 @@
   <!--/ FRESH LIFE SECTION -->
   <section class="fresh-life">
     <!--. CONTAINER -->
-    <div class="fresh-life__container">
+    <div class="fresh-life__container container">
 
       <!--, HEADER WITH NAVABAR  -->
       <div class="header">
-        <h1 class="header__brand">Cahee</h1>
+        <h1 class="header__brand"><a href="/">Cahee</a></h1>
+        <label for="toggle-navbar" class="burger" href="#">
+          <div>&horbar;</div><div>&horbar;</div><div>&horbar;</div>
+        </label>
+        <input class="header__checkbox" type="checkbox" id="toggle-navbar">
         <nav class="header__navbar">
           <a href="#" class="header__link">Home</a>
           <a href="#about" class="header__link">About</a>
@@ -29,11 +33,6 @@
           <a href="#blog" class="header__link">Blog</a>
           <a href="#contact" class="header__link">Contact</a>
         </nav>
-        <div class="burger">
-          <div>&horbar;</div>
-          <div>&horbar;</div>
-          <div>&horbar;</div>
-        </div>
       </div>
 
       <!--, TEXT AND LINK BOX  -->
@@ -44,12 +43,36 @@
         <a href="#services" class="fresh-life__link">Get Free Now</a>
       </div>
 
-      <!--, MOUSE IMAGE -->
-      <img class="fresh-life__icon" src="/img/093.png" alt="">
+                <!--, MOUSE LINK -->
+    <a class="mouse-link" href="#about">
+        <img class="mouse-link__icon" src="img/093.png" alt="mouse">
+      </a>
 
     </div>
+
   </section>
 
+  <!--/ ABOUT SECTION  -->
+  <section class="about" id="about">
+    <!--. CONTAINER -->
+    <div class="about__container container">
+
+      <img src="img/091.png" alt="raspberries" class="about__image">
+
+      <div class="about__text-box">
+        <h2 class="about__heading">About Us</h2>
+        <p class="about__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod fugiat dignissimos voluptate eius deserunt, temporibus soluta, accusantium ab eum beatae voluptatibus illo dolor.</p>
+        <p class="about__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero dolorum expedita accusamus at, doloribus illum voluptatem. Quod laboriosam provident odit.</p>
+      </div>
+      
+      <a class="mouse-link" href="#about">
+          <img class="mouse-link__icon" src="/img/093.png" alt="mouse">
+        </a>
+    </div>
+          <!--, MOUSE LINK -->
+  </section>
+  
+  <!--/  -->
 </body>
 
 </html>

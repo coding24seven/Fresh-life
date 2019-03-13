@@ -14,6 +14,7 @@
 html {
   box-sizing: border-box; // Include padding and border in the element's total width and height:
   font-size: $font-size;
+  scroll-behavior: smooth;
 }
 /// <body>
 body {
@@ -25,4 +26,27 @@ body {
 /// <p>
 p {
   // line-height: 1.4;
+}
+
+/// <a>
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/// CONTAINER
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  display: flex;
+  @media(max-width: em(700)) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @media(max-width: em(500)) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
