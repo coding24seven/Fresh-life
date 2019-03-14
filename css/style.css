@@ -225,6 +225,18 @@ a {
   margin-right: 0;
 }
 
+/* line 2, sass/components/_link-button.scss */
+.link-button {
+  padding: 1.2rem 3.6rem;
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #f9f8fb;
+  background-color: #5585a2;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
 /* line 2, sass/components/_mouse-link.scss */
 .mouse-link {
   position: absolute;
@@ -456,6 +468,193 @@ a {
   .fresh-life__link {
     align-self: auto;
   }
+}
+
+/* line 2, sass/sections/_gallery.scss */
+.gallery {
+  background-color: #ffe92f;
+}
+
+/* line 6, sass/sections/_gallery.scss */
+.gallery__container {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 15, sass/sections/_gallery.scss */
+.gallery__intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 23, sass/sections/_gallery.scss */
+.gallery__heading {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 31.25em) {
+  /* line 23, sass/sections/_gallery.scss */
+  .gallery__heading {
+    font-size: 6.5rem;
+  }
+}
+
+/* line 33, sass/sections/_gallery.scss */
+.gallery__description {
+  width: 50%;
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 56.25em) {
+  /* line 33, sass/sections/_gallery.scss */
+  .gallery__description {
+    width: 70%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  /* line 33, sass/sections/_gallery.scss */
+  .gallery__description {
+    width: 85%;
+  }
+}
+
+@media (max-width: 25em) {
+  /* line 33, sass/sections/_gallery.scss */
+  .gallery__description {
+    width: 95%;
+  }
+}
+
+/* line 52, sass/sections/_gallery.scss */
+.gallery__all-photos-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 75em) {
+  /* line 52, sass/sections/_gallery.scss */
+  .gallery__all-photos-box {
+    width: 66rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 50em) {
+  /* line 52, sass/sections/_gallery.scss */
+  .gallery__all-photos-box {
+    width: 94%;
+  }
+}
+
+/* line 67, sass/sections/_gallery.scss */
+.gallery__photos-box {
+  width: 32rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 75em) {
+  /* line 67, sass/sections/_gallery.scss */
+  .gallery__photos-box {
+    flex-direction: row;
+    width: 91%;
+  }
+}
+
+@media (max-width: 75em) {
+  /* line 67, sass/sections/_gallery.scss */
+  .gallery__photos-box {
+    transform: translateX(-0.4rem);
+  }
+}
+
+@media (max-width: 31.25em) {
+  /* line 67, sass/sections/_gallery.scss */
+  .gallery__photos-box {
+    width: 100%;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+}
+
+/* line 88, sass/sections/_gallery.scss */
+.gallery__photo-wrapper {
+  box-shadow: 0px 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* line 91, sass/sections/_gallery.scss */
+.gallery__photo-wrapper--1 {
+  width: 66rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 75em) {
+  /* line 96, sass/sections/_gallery.scss */
+  .gallery__photo-wrapper--2 {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 75em) {
+  /* line 101, sass/sections/_gallery.scss */
+  .gallery__photo-wrapper--3 {
+    align-self: flex-start;
+  }
+}
+
+/* line 106, sass/sections/_gallery.scss */
+.gallery__photo-wrapper--4 {
+  width: 48.5%;
+}
+
+@media (max-width: 75em) {
+  /* line 106, sass/sections/_gallery.scss */
+  .gallery__photo-wrapper--4 {
+    margin-right: auto;
+    flex: 0 0 47.5%;
+  }
+}
+
+/* line 113, sass/sections/_gallery.scss */
+.gallery__photo-wrapper--5 {
+  width: 48.5%;
+}
+
+@media (max-width: 75em) {
+  /* line 113, sass/sections/_gallery.scss */
+  .gallery__photo-wrapper--5 {
+    flex: 0 0 47.5%;
+  }
+}
+
+@media (max-width: 31.25em) {
+  /* line 88, sass/sections/_gallery.scss */
+  .gallery__photo-wrapper {
+    flex: 0 0 100%;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+/* line 130, sass/sections/_gallery.scss */
+.gallery__photo {
+  width: 100%;
+  display: block;
+  height: 100%;
 }
 
 /* line 2, sass/sections/_services.scss */

@@ -1,0 +1,140 @@
+// <section> GALLERY
+.gallery {
+  background-color: #ffe92f;
+
+  /// <div> CONTAINER LOCAL
+  &__container {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  //. <div> BOX FOR HEADING AND DESCRIPTION
+  &__intro-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  //, <h2> HEADING
+  &__heading {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    @media(max-width: em(500)) {
+      font-size: 6.5rem;
+    }
+  }
+
+  //, <p> DESCRIPTION
+  &__description {
+    width: 50%;
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    @media(max-width: em(900)) {
+      width: 70%;
+    }
+    @media(max-width: em(600)) {
+      width: 85%;
+    }
+    @media(max-width: em(400)) {
+      width: 95%;
+    }
+  }
+
+  //. <div> BOX FOR ALL PHOTOS
+  $gallery-photo-max-width: 66rem;
+
+  &__all-photos-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media(max-width: em(1200)) {
+      width: $gallery-photo-max-width;
+      align-items: center;
+      justify-content: center;
+    }
+    @media(max-width: em(800)) {
+      width: 94%;
+    }
+  }
+
+  //, <div> BOX FOR MORE THAN ONE PHOTO USED AROUND PHOTOS 2 AND 3
+  &__photos-box {
+    width: 32rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(max-width: em(1200)) {
+      flex-direction: row;
+      width: 91%;
+    }
+    @media(max-width: em(1200)) {
+      transform: translateX(-.4rem);
+    }
+    @media(max-width: em(500)) {
+      width: 100%;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  //, <figure> WRAPPER FOR EACH PHOTO
+  &__photo-wrapper {
+    // properties are located below the modifiers
+
+    &--1 {
+      width: $gallery-photo-max-width;
+      margin-bottom: 3rem;
+
+    }
+    &--2 {
+      @media(max-width: em(1200)) {
+        margin-right: 3rem;
+      }
+    }
+    &--3 {
+      @media(max-width: em(1200)) {
+        align-self: flex-start;
+      }
+    }
+    &--4 {
+      width: 48.5%;
+      @media(max-width: em(1200)) {
+        margin-right: auto;
+        flex: 0 0 47.5%;
+      }
+    }
+    &--5 {
+      width: 48.5%;
+      @media(max-width: em(1200)) {
+        flex: 0 0 47.5%;
+      }
+    }
+
+    // &__photo-wrapper properties
+    box-shadow: 0px .2rem .5rem rgba(black, .5);
+    @media(max-width: em(500)) {
+      flex: 0 0 100%;
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+  }
+
+  // <img>
+  &__photo {
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+
+  //. <a>
+  &__view-more {}
+
+
+}
