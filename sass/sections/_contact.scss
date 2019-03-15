@@ -1,0 +1,24 @@
+/// CONTACT
+.contact {
+  background: url(/img/007.jpg) right center no-repeat /cover;
+  height: 500px; // TODO: REMOVE
+
+  // <div> CONTAINER
+  &__container {
+    display: block;
+  }
+
+  // <h2> HEADING
+  &__heading {
+    font-size: 8rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  // <p> DESCRIPTION
+  &__description {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+  
+}

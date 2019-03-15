@@ -1,5 +1,6 @@
 /* line 2, sass/foundation/_base.scss */
 * {
+  outline: 1px solid pink;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
@@ -537,12 +538,36 @@ a {
   background-color: #f72b3b;
 }
 
+/* line 2, sass/sections/_contact.scss */
+.contact {
+  background: url(/img/007.jpg) right center no-repeat/cover;
+  height: 500px;
+}
+
+/* line 7, sass/sections/_contact.scss */
+.contact__container {
+  display: block;
+}
+
+/* line 12, sass/sections/_contact.scss */
+.contact__heading {
+  font-size: 8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* line 19, sass/sections/_contact.scss */
+.contact__description {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
 /* line 2, sass/sections/_fresh-life.scss */
 .fresh-life {
   background-color: #f9f8fb;
 }
 
-/* line 8, sass/sections/_fresh-life.scss */
+/* line 6, sass/sections/_fresh-life.scss */
 .fresh-life__container {
   position: relative;
   background: url(/img/092.jpg) right center no-repeat/cover;
@@ -554,13 +579,13 @@ a {
 }
 
 @media (max-width: 56.25em) {
-  /* line 8, sass/sections/_fresh-life.scss */
+  /* line 6, sass/sections/_fresh-life.scss */
   .fresh-life__container {
     background: url("/img/092-cropped.jpg") top center no-repeat/cover;
   }
 }
 
-/* line 22, sass/sections/_fresh-life.scss */
+/* line 20, sass/sections/_fresh-life.scss */
 .fresh-life__text-and-link-box {
   width: 34%;
   align-self: flex-start;
@@ -570,7 +595,7 @@ a {
 }
 
 @media (max-width: 56.25em) {
-  /* line 22, sass/sections/_fresh-life.scss */
+  /* line 20, sass/sections/_fresh-life.scss */
   .fresh-life__text-and-link-box {
     width: 100%;
     align-self: center;
@@ -579,14 +604,14 @@ a {
 }
 
 @media (max-width: 31.25em) {
-  /* line 22, sass/sections/_fresh-life.scss */
+  /* line 20, sass/sections/_fresh-life.scss */
   .fresh-life__text-and-link-box {
     align-items: center;
     text-align: center;
   }
 }
 
-/* line 41, sass/sections/_fresh-life.scss */
+/* line 39, sass/sections/_fresh-life.scss */
 .fresh-life__heading {
   font-size: 6rem;
   font-weight: 800;
@@ -594,20 +619,20 @@ a {
 }
 
 @media (max-width: 81.25em) {
-  /* line 41, sass/sections/_fresh-life.scss */
+  /* line 39, sass/sections/_fresh-life.scss */
   .fresh-life__heading {
     font-size: 4.6rem;
   }
 }
 
 @media (max-width: 31.25em) {
-  /* line 41, sass/sections/_fresh-life.scss */
+  /* line 39, sass/sections/_fresh-life.scss */
   .fresh-life__heading {
     margin-bottom: 3rem;
   }
 }
 
-/* line 54, sass/sections/_fresh-life.scss */
+/* line 52, sass/sections/_fresh-life.scss */
 .fresh-life__description {
   margin-bottom: 3.7rem;
   font-size: 1.7rem;
@@ -615,13 +640,13 @@ a {
 }
 
 @media (max-width: 31.25em) {
-  /* line 54, sass/sections/_fresh-life.scss */
+  /* line 52, sass/sections/_fresh-life.scss */
   .fresh-life__description {
     margin-bottom: 4.7rem;
   }
 }
 
-/* line 67, sass/sections/_fresh-life.scss */
+/* line 65, sass/sections/_fresh-life.scss */
 .fresh-life__link {
   display: inline-block;
   padding: 1.5rem 2.2rem;
@@ -636,14 +661,14 @@ a {
 }
 
 @media (max-width: 56.25em) {
-  /* line 67, sass/sections/_fresh-life.scss */
+  /* line 65, sass/sections/_fresh-life.scss */
   .fresh-life__link {
     align-self: flex-end;
   }
 }
 
 @media (max-width: 31.25em) {
-  /* line 67, sass/sections/_fresh-life.scss */
+  /* line 65, sass/sections/_fresh-life.scss */
   .fresh-life__link {
     align-self: auto;
   }

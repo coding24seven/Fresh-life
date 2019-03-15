@@ -2,8 +2,6 @@
 .fresh-life {
 	background-color: $creamy-color;
 	
-	@media(max-width: em(900)) {	}
-
 	//. <div> CONTAINER SPECIFIC (general container in base.scss)
 	&__container {
 		position: relative;
