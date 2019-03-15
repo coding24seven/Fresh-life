@@ -1,6 +1,5 @@
 /* line 2, sass/foundation/_base.scss */
 * {
-  outline: 1px solid pink;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
@@ -371,37 +370,171 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #9257e6;
+  color: white;
 }
 
 /* line 16, sass/sections/_blog.scss */
 .blog__heading {
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
   font-size: 8rem;
   font-weight: 700;
 }
 
 /* line 23, sass/sections/_blog.scss */
 .blog__description {
-  margin-bottom: 3rem;
+  width: 52%;
+  margin-bottom: 3.5rem;
   font-size: 1.7rem;
-  font-weight: 700;
+  font-weight: 300;
+  text-align: center;
 }
 
-/* line 30, sass/sections/_blog.scss */
+@media (max-width: 43.75em) {
+  /* line 23, sass/sections/_blog.scss */
+  .blog__description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 31.25em) {
+  /* line 23, sass/sections/_blog.scss */
+  .blog__description {
+    width: 100%;
+  }
+}
+
+/* line 38, sass/sections/_blog.scss */
 .blog__all-photos-box {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 36, sass/sections/_blog.scss */
-.blog__photo-box {
-  flex: 0 0 31%;
+@media (max-width: 68.75em) {
+  /* line 38, sass/sections/_blog.scss */
+  .blog__all-photos-box {
+    flex-direction: column;
+  }
 }
 
-/* line 41, sass/sections/_blog.scss */
+/* line 47, sass/sections/_blog.scss */
+.blog__photo-box {
+  position: relative;
+  flex: 0 0 31%;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 68.75em) {
+  /* line 52, sass/sections/_blog.scss */
+  .blog__photo-box:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+/* line 59, sass/sections/_blog.scss */
 .blog__photo {
   width: 100%;
+}
+
+/* line 64, sass/sections/_blog.scss */
+.blog__details {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to top, black, transparent 47%);
+}
+
+/* line 83, sass/sections/_blog.scss */
+.blog__date {
+  margin-bottom: auto;
+  padding: 0.4rem .7rem;
+  text-align: center;
+  line-height: 1;
+  border-radius: 10%;
+  background-color: rgba(38, 38, 38, 0.6);
+}
+
+/* line 91, sass/sections/_blog.scss */
+.blog__date--day {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 22.4375em) {
+  /* line 91, sass/sections/_blog.scss */
+  .blog__date--day {
+    font-size: 2.8rem;
+  }
+}
+
+/* line 99, sass/sections/_blog.scss */
+.blog__date--month {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 22.4375em) {
+  /* line 99, sass/sections/_blog.scss */
+  .blog__date--month {
+    font-size: 1.9rem;
+  }
+}
+
+/* line 110, sass/sections/_blog.scss */
+.blog__title {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s .03s;
+}
+
+@media (max-width: 22.4375em) {
+  /* line 110, sass/sections/_blog.scss */
+  .blog__title {
+    font-size: 1.7rem;
+  }
+}
+
+/* line 118, sass/sections/_blog.scss */
+.blog__title:hover {
+  transform: skewX(-10deg);
+}
+
+/* line 124, sass/sections/_blog.scss */
+.blog__author {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@media (max-width: 22.4375em) {
+  /* line 124, sass/sections/_blog.scss */
+  .blog__author {
+    font-size: 1.4rem;
+  }
+}
+
+/* line 132, sass/sections/_blog.scss */
+.blog__author--nickname {
+  cursor: pointer;
+  transition: .3s .03s;
+}
+
+/* line 135, sass/sections/_blog.scss */
+.blog__author--nickname:hover {
+  color: #f72b3b;
+  letter-spacing: .03rem;
+}
+
+/* line 144, sass/sections/_blog.scss */
+.blog__link-button {
+  background-color: #f72b3b;
 }
 
 /* line 2, sass/sections/_fresh-life.scss */
