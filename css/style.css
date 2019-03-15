@@ -1,5 +1,6 @@
 /* line 2, sass/foundation/_base.scss */
 * {
+  outline: 1px solid pink;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
@@ -356,6 +357,51 @@ a {
   margin-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 300;
+}
+
+/* line 2, sass/sections/_blog.scss */
+.blog {
+  background-color: #b07cf7;
+}
+
+/* line 6, sass/sections/_blog.scss */
+.blog .container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9257e6;
+}
+
+/* line 16, sass/sections/_blog.scss */
+.blog__heading {
+  margin-bottom: 2rem;
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+/* line 23, sass/sections/_blog.scss */
+.blog__description {
+  margin-bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+/* line 30, sass/sections/_blog.scss */
+.blog__all-photos-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 36, sass/sections/_blog.scss */
+.blog__photo-box {
+  flex: 0 0 31%;
+}
+
+/* line 41, sass/sections/_blog.scss */
+.blog__photo {
+  width: 100%;
 }
 
 /* line 2, sass/sections/_fresh-life.scss */
@@ -800,5 +846,139 @@ a {
   /* line 100, sass/sections/_services.scss */
   .services__heading {
     font-size: 6rem;
+  }
+}
+
+/* line 5, sass/sections/_subscribe.scss */
+.subscribe__container {
+  padding: 8rem;
+  background: url(/img/046.jpg) right center no-repeat/contain;
+}
+
+@media (max-width: 50em) {
+  /* line 5, sass/sections/_subscribe.scss */
+  .subscribe__container {
+    padding-top: 12rem;
+    background: url(/img/046-cropped.jpg) right center no-repeat/contain;
+    color: white;
+  }
+}
+
+@media (max-width: 34.375em) {
+  /* line 5, sass/sections/_subscribe.scss */
+  .subscribe__container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 6rem;
+  }
+}
+
+@media (max-width: 25em) {
+  /* line 5, sass/sections/_subscribe.scss */
+  .subscribe__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* line 25, sass/sections/_subscribe.scss */
+.subscribe__form {
+  width: 60%;
+}
+
+@media (max-width: 56.25em) {
+  /* line 25, sass/sections/_subscribe.scss */
+  .subscribe__form {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 50em) {
+  /* line 25, sass/sections/_subscribe.scss */
+  .subscribe__form {
+    background-color: rgba(0, 0, 255, 0.5);
+    margin: 0 auto;
+    border-top-left-radius: 11%;
+    border-top-right-radius: 11%;
+  }
+}
+
+/* line 39, sass/sections/_subscribe.scss */
+.subscribe__heading {
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 50em) {
+  /* line 39, sass/sections/_subscribe.scss */
+  .subscribe__heading {
+    margin-bottom: 2rem;
+    padding: 2rem 2rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 34.375em) {
+  /* line 39, sass/sections/_subscribe.scss */
+  .subscribe__heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 22.4375em) {
+  /* line 39, sass/sections/_subscribe.scss */
+  .subscribe__heading {
+    font-size: 2.8rem;
+  }
+}
+
+/* line 57, sass/sections/_subscribe.scss */
+.subscribe__description {
+  margin-bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+@media (max-width: 50em) {
+  /* line 57, sass/sections/_subscribe.scss */
+  .subscribe__description {
+    padding: 0 2rem;
+  }
+}
+
+/* line 67, sass/sections/_subscribe.scss */
+.subscribe__input {
+  padding-left: 2rem;
+  width: 54%;
+  height: 5rem;
+  outline: none;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 56.25em) {
+  /* line 67, sass/sections/_subscribe.scss */
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
+/* line 78, sass/sections/_subscribe.scss */
+.subscribe ::placeholder {
+  color: #81a31c;
+}
+
+/* line 83, sass/sections/_subscribe.scss */
+.subscribe__button {
+  margin: 0;
+  color: white;
+  background-color: #96b92c;
+  cursor: pointer;
+}
+
+@media (max-width: 56.25em) {
+  /* line 83, sass/sections/_subscribe.scss */
+  .subscribe__button {
+    width: 100%;
   }
 }

@@ -1,0 +1,50 @@
+// BLOG
+.blog {
+  background-color: #b07cf7;
+
+  /// CONTAINER
+  .container {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9257e6;
+  }
+
+  //. <h4> HEADING
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 8rem;
+    font-weight: 700;
+  }
+
+  //. <p> DESCRIPTION
+  &__description {
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  //, <div> BOX FOR ALL PHOTOS
+  &__all-photos-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // <figure> BOX FOR ONE PHOTO
+  &__photo-box {
+    flex: 0 0 31%;
+  }
+
+  // <img> PHOTO
+  &__photo {
+    width: 100%;
+  }
+
+  // <figcaption> DETAILS
+  &__details {
+    
+  }
+  
+}

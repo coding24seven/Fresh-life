@@ -1,0 +1,92 @@
+// <section> SUBSCRIBE
+.subscribe {
+
+  /// <div> CONTAINER
+  &__container {
+    padding: 8rem;
+    background: url(/img/046.jpg) right center no-repeat /contain;
+    @media(max-width: em(800)) {
+      padding-top: 12rem;
+      background: url(/img/046-cropped.jpg) right center no-repeat /contain;
+      color: white;
+    }
+    @media(max-width: em(550)) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      padding-top: 6rem;
+    }
+    @media(max-width: em(400)) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  // <form> FORM
+  &__form {
+    width: 60%;
+    @media(max-width: em(900)) {
+      width: 40rem;
+    }
+    @media(max-width: em(800)) {
+      background-color: rgba(blue,0.5);
+      margin: 0 auto;
+      border-top-left-radius: 11%;
+      border-top-right-radius: 11%;
+    }
+  }
+
+  // <h2> HEADING
+  &__heading {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
+    @media(max-width: em(800)) {
+      margin-bottom: 2rem;;
+      padding: 2rem 2rem 0;
+      text-align: center;
+    }
+    @media(max-width: em(550)) {
+      font-size: 3rem;
+    }
+    @media(max-width: em(359)) {
+      font-size: 2.8rem;
+    }
+  }
+
+  // <p> DESCRIPTION
+  &__description {
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    @media(max-width: em(800)) {
+      padding: 0 2rem;
+    }
+  }
+
+  // <input> INPUT
+  &__input {
+    padding-left: 2rem;
+    width: 54%;
+    height: 5rem;
+    outline: none;
+    font-size: 1.7rem;
+    @media(max-width: em(900)) {
+      // display: block;
+      width: 100%;
+    }
+  }
+  ::placeholder {
+    color: #81a31c;
+  }
+
+  // <button> BUTTON
+  &__button {
+    margin: 0;
+    color: white;
+    background-color: #96b92c;
+    cursor: pointer;
+    @media(max-width: em(900)) {
+      width: 100%;
+    }
+  }
+}
