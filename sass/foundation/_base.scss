@@ -1,6 +1,6 @@
 /// <*>
 * {
-  outline: 1px solid pink;
+  // outline: 1px solid pink;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent; // remove highlight on touch
@@ -23,15 +23,16 @@ body {
   color: $text-color;
 }
 
-/// <p>
-p {
-
-}
-
 /// <a>
 a {
   text-decoration: none;
   color: currentColor;
+}
+
+/// INPUT, TEXTAREA
+input, textarea {
+  font-family: inherit;
+  outline: none;
 }
 
 /// CONTAINER

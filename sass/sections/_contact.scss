@@ -1,24 +1,153 @@
 /// CONTACT
 .contact {
-  background: url(/img/007.jpg) right center no-repeat /cover;
-  height: 500px; // TODO: REMOVE
+  background: url(/img/007.jpg) center center no-repeat;
+  background-size: cover;
 
-  // <div> CONTAINER
+  //. <div> CONTAINER
   &__container {
     display: block;
+    padding: 7rem 8rem;
+    overflow: auto; // so its height grows to contain floated elements
+    @media(max-width: em(500)) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @media(max-width: em(400)) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
-  // <h2> HEADING
+  //, <h2> HEADING
   &__heading {
+    margin-bottom: 2rem;
     font-size: 8rem;
     font-weight: 700;
     text-align: center;
+    @media(max-width: em(500)) {
+      font-size: 6rem;
+    }
   }
 
-  // <p> DESCRIPTION
+  //, <p> DESCRIPTION
   &__description {
+    margin-bottom: 5rem;
+    text-align: center;
+    @media(max-width: em(500)) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  //, <form> FORM
+  &__form {
+    float: left;
+    width: 40%;
+    @media(max-width: em(1000)) {
+      width: 45%;
+    }
+    @media(max-width: em(900)) {
+      width: 44rem;
+      float: none;
+      margin: 0 auto;
+    }
+    @media(max-width: em(650)) {
+      width: 100%;
+    }
+    
+    ::placeholder {
+      color: $creamy-color;
+    }
+
+    // EVERY CHILD OF FORM (INPUTS AND BUTTON)
+    & > * {
+      width: 100%;
+      height: 5rem;
+      display: block;
+      margin-bottom: 2rem;
+      margin-left: 0;
+      color: $creamy-color;
+      background-color: rgba($contact-form__background-color, .5);
+      font-size: 1.6rem;
+      border: none;
+      // BUTTON
+      &:last-child {
+        margin-bottom: 0;
+        background-color: rgba($contact-form__background-color, .8);
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // EVERY INPUT OF FORM
+  &__input {
+    padding-left: 2rem;
+    &:focus {
+      background-color: rgba($contact-form__background-color, .8);
+      letter-spacing: .1rem;
+      font-weight: 500;
+    }
+  }
+
+  // <textarea> MESSAGE INPUT
+  &__message {
+    height: 14rem;
+    padding: 1.4rem 2rem;
+  }
+
+  //, <div> INFO BOX FOR: ADDRESS, EMAIL, PHONE
+  &__info-box {
+    margin-right: 11rem;
+    float: right;
+    @media(max-width: em(1200)) {
+      margin-right: 6rem;
+    }
+    @media(max-width: em(1100)) {
+      margin-right: 3rem;
+    }
+    @media(max-width: em(1000)) {
+      margin-right: 6rem;
+      width: 30%;
+    }
+    @media(max-width: em(900)) {
+      float: none;
+      margin: 5rem auto 0;
+      width: 100%;
+      text-align: center;
+      color: $creamy-color;
+    }
+    @media(max-width: em(400)) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    // EVERY CHILD OF INFO-BOX
+    & > * {
+      margin-bottom: 1.3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // <div> ADDRESS OBJECT
+  &__address {
+  }
+
+  // <div> KEY
+  &__key {
+    margin-bottom: .3rem;
     font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  // <div> VALUE
+  &__value {
+    font-size: 1.8rem;
     font-weight: 300;
   }
-  
 }

@@ -5,14 +5,16 @@
 	//. <div> CONTAINER SPECIFIC (general container in base.scss)
 	&__container {
 		position: relative;
-		background: url(/img/092.jpg) right center no-repeat /cover;
+		background: url(/img/092.jpg) right center no-repeat;
+		background-size: cover;
 		height: 100vh;
 		padding-top: 1.5rem;
 		padding-bottom: 5.5rem;
 		flex-wrap: wrap;
 		align-items: flex-start;
 		@media(max-width: em(900)) {
-			background: url("/img/092-cropped.jpg") top center no-repeat /cover;
+			background: url("/img/092-cropped.jpg") top center no-repeat;
+			background-size: cover;
 		}
 	}
 
@@ -51,11 +53,6 @@
 	// <p> DESCRIPTION
 	&__description {
 		margin-bottom: 3.7rem;
-		font-size: 1.7rem;
-		font-weight: 300;
-		@media(max-width: em(900)) {
-
-		}
 		@media(max-width: em(500)) {
 			margin-bottom: 4.7rem;
 		}

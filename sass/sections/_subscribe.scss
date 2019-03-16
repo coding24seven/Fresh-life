@@ -4,10 +4,12 @@
   /// <div> CONTAINER
   &__container {
     padding: 8rem;
-    background: url(/img/046.jpg) right center no-repeat /contain;
+    background: url(/img/046.jpg) right center no-repeat;
+    background-size: contain;
     @media(max-width: em(800)) {
       padding-top: 12rem;
-      background: url(/img/046-cropped.jpg) right center no-repeat /contain;
+      background: url(/img/046-cropped.jpg) right center no-repeat;
+      background-size: contain;
       color: white;
     }
     @media(max-width: em(550)) {
@@ -24,6 +26,9 @@
   // <form> FORM
   &__form {
     width: 60%;
+    ::placeholder {
+      color: #81a31c;
+    }
     @media(max-width: em(900)) {
       width: 40rem;
     }
@@ -56,8 +61,6 @@
   // <p> DESCRIPTION
   &__description {
     margin-bottom: 3rem;
-    font-size: 1.7rem;
-    font-weight: 300;
     @media(max-width: em(800)) {
       padding: 0 2rem;
     }
@@ -68,15 +71,10 @@
     padding-left: 2rem;
     width: 54%;
     height: 5rem;
-    outline: none;
     font-size: 1.7rem;
     @media(max-width: em(900)) {
-      // display: block;
       width: 100%;
     }
-  }
-  ::placeholder {
-    color: #81a31c;
   }
 
   // <button> BUTTON

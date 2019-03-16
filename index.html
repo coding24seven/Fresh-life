@@ -40,7 +40,7 @@
       <!--, TEXT AND LINK BOX  -->
       <div class="fresh-life__text-and-link-box">
         <h2 class="fresh-life__heading">Fresh Life</h2>
-        <p class="fresh-life__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sunt quod aut
+        <p class="fresh-life__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sunt quod aut
           fuga pariatur natus maiores ipsa eligendi.</p>
         <a href="#services" class="fresh-life__link">Get Free Now</a>
       </div>
@@ -63,9 +63,9 @@
 
       <div class="about__text-box">
         <h2 class="about__heading">About Us</h2>
-        <p class="about__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod fugiat dignissimos
+        <p class="about__description description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod fugiat dignissimos
           voluptate eius deserunt, temporibus soluta, accusantium ab eum beatae voluptatibus illo dolor.</p>
-        <p class="about__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero dolorum expedita
+        <p class="about__description description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero dolorum expedita
           accusamus at, doloribus illum voluptatem. Quod laboriosam provident odit.</p>
       </div>
 
@@ -124,7 +124,7 @@
       <!-- HEADING AND DESCRIPTION -->
       <div class="gallery__intro-box">
         <h2 class="gallery__heading">Gallery</h2>
-        <p class="gallery__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore amet fuga vero nobis aperiam consequuntur voluptates. Consequatur inventore cumque debitis ea.</p>
+        <p class="gallery__description description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore amet fuga vero nobis aperiam consequuntur voluptates. Consequatur inventore cumque debitis ea.</p>
       </div>
 
       <!-- ALL PHOTOS BOX -->
@@ -165,7 +165,7 @@
       <form class="subscribe__form" method="POST">
         <label for="email" class="subscribe__label">
           <h2 class="subscribe__heading">Subscribe to Us</h2>
-          <p class="subscribe__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, itaque quod reiciendis ipsam, error tempore quasi necessitatibus.</p>
+          <p class="subscribe__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, itaque quod reiciendis ipsam, error tempore quasi necessitatibus.</p>
         </label>
         <input class="subscribe__input" id="email" placeholder="Your email address" type="text" spellcheck="false">
         <button class="subscribe__button link-button">Subscribe</button>
@@ -179,7 +179,7 @@
 
       <!-- BLOG INTRO -->
       <h2 class="blog__heading">Blog</h2>
-      <p class="blog__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse magni porro? Autem repellat itaque eaque facere nisi! Nam libero duptus extremus iusto explicabo.</p>
+      <p class="blog__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse magni porro? Autem repellat itaque eaque facere nisi! Nam libero duptus extremus iusto explicabo.</p>
 
       <!-- BLOG PHOTOS -->
       <div class="blog__all-photos-box">
@@ -210,7 +210,7 @@
             <h4 class="blog__title">Growing Food and a 'Thirst' for Innovation</h4>
             <div class="blog__author">
               <span class="blog__author--by">By </span>
-              <span class="blog__author--nickname">SuperStale</span>
+              <span class="blog__author--nickname">StaleBiscuit</span>
               <span class="blog__author--active-ago"> - 5 hours ago</span>
             </div>
           </figcaption>
@@ -241,39 +241,54 @@
   </section>
 
   <!--/ CONTACT -->
-    <section class="contact">
-      <div class="contact__container container">
+  <section class="contact">
+    <div class="contact__container container">
 
-        <!-- HEADING AND DESCRIPTION -->
-        <h2 class="contact__heading">Contact</h2>
-        <p class="contact__description">Get in Touch with Us</p>
+      <!-- HEADING AND DESCRIPTION -->
+      <h2 class="contact__heading">Contact</h2>
+      <p class="contact__description description">Get in touch with us if you require any assistance.<br>We strive to respond within 24 hours.</p>
 
-        <!-- FORM -->
-        <form action="" class="contact__form" method="POST">
-          <input type="text" class="contact__name">
-          <input type="text" class="contact__email">
-          <input type="text" class="contact__phone">
-          <textarea class="contact__message"></textarea>
-          <button class="contact__submit"></button>
-        </form>
+      <!-- FORM -->
+      <form action="" class="contact__form" method="POST" spellcheck="false">
+        <input type="text" class="contact__name contact__input" placeholder="Your name">
+        <input type="text" class="contact__email contact__input" placeholder="Your email">
+        <input type="text" class="contact__phone contact__input" placeholder="Your phone number">
+        <textarea class="contact__message contact__input" placeholder="Your message "></textarea>
+        <button class="contact__submit">Send</button>
+      </form>
 
-        <!-- ADDRESS, EMAIL, PHONE, ETC -->
+      <!-- INFO: ADDRESS, EMAIL, PHONE, ETC -->
+      <div class="contact__info-box">
+
         <div class="contact__address">
-          <div class="contact__address--key">Address</div>
-          <div class="contact__address--value">836 High Road, Húnavatnshreppur, Iceland</div>
+          <div class="contact__address--key contact__key">Address</div>
+          <div class="contact__address--value contact__value">836 High Road, Húnavatnshreppur, Iceland</div>
         </div>
+
         <div class="contact__email">
-          <div class="contact__email--key">Email</div>
-          <div class="contact__email--value">info@cahee.com</div>
+          <div class="contact__email--key contact__key">Email</div>
+          <div class="contact__email--value contact__value">info@cahee.com</div>
         </div>
+
         <div class="contact__phone">
-          <div class="contact__phone--key">Phone</div>
-          <div class="contact__phone--value">Phone</div>
+          <div class="contact__phone--key contact__key">Phone</div>
+          <div class="contact__phone--value contact__value">34 7491 7592</div>
         </div>
-        
+
       </div>
-    </section>
-  
+
+    </div>
+  </section>
+
+  <!--/ FOOTER -->
+  <section class="footer">
+    <div class="footer__container container">
+      <div class="footer__copyright footer__item">&copy; 2019. All rights reserved</div>
+      <div class="footer__brand footer__item">Cahee</div>
+      <div class="footer__author footer__item">Made by the Maker</div>
+    </div>
+  </section>
+
 </body>
 
 </html>
