@@ -15,8 +15,6 @@
   //. <h4> HEADING
   &__heading {
     margin-bottom: 2.4rem;
-    font-size: 8rem;
-    font-weight: 700;
   }
 
   //. <p> DESCRIPTION
@@ -140,6 +138,7 @@
 
   //. <a> VIEW MORE LINK BUTTON
   &__link-button {
+    margin-top: 4rem;
     background-color: #f72b3b;
   }
 }

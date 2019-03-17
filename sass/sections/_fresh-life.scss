@@ -1,25 +1,30 @@
 /// <section> FRESH LIFE
 .fresh-life {
+	position: relative;
 	background-color: $creamy-color;
 	
 	//. <div> CONTAINER SPECIFIC (general container in base.scss)
 	&__container {
-		position: relative;
-		background: url(/img/092.jpg) right center no-repeat;
-		background-size: cover;
-		height: 100vh;
+		min-height: 100vh;
 		padding-top: 1.5rem;
 		padding-bottom: 5.5rem;
-		flex-wrap: wrap;
-		align-items: flex-start;
+		background: url(/img/092.jpg) right center no-repeat;
+		background-size: cover;
+		// flex-wrap: wrap;
+		// flex-direction: column;
+		// align-items: flex-start;
+		display: block;
 		@media(max-width: em(900)) {
 			background: url("/img/092-cropped.jpg") top center no-repeat;
 			background-size: cover;
 		}
 	}
 
+	//, HEADER SITS IN A SEPARATE FILE
+
 	//, <div> BOX FOR THE HEADING, DESCRIPTION, LINK
 	&__text-and-link-box {
+		margin-top: 10rem;
 		width: 34%;
 		align-self: flex-start;
 		display: flex;
@@ -28,8 +33,9 @@
 
 		@media(max-width: em(900)) {
 			width: 100%;
-			align-self: center;
-			transform: translateY(-6rem);
+			margin-top: 6rem;
+			// align-self: center;
+			// transform: translateY(-6rem);
 		}
 		@media(max-width: em(500)) {
 			align-items: center;
@@ -39,31 +45,28 @@
 
 	// <h2> HEADING
 	&__heading {
-		font-size: 6rem;
-		font-weight: 800;
 		margin-bottom: 2rem;
-		@media(max-width: em(1300)) {
-			font-size: 4.6rem;
+		@media(max-width: em(900)) {
+			margin-bottom: 8rem;
 		}
 		@media(max-width: em(500)) {
-			margin-bottom: 3rem;
+			margin-bottom: 5rem;
 		}
 	}
 
 	// <p> DESCRIPTION
 	&__description {
-		margin-bottom: 3.7rem;
+		margin-bottom: 3.8rem;
+		@media(max-width: em(900)) {
+			margin-bottom: 9rem;
+		}
 		@media(max-width: em(500)) {
-			margin-bottom: 4.7rem;
+			margin-bottom: 8rem;
 		}
 	}
 
-	// <a> LINK
+	// <a> LINK-BUTTON
 	&__link {
-		display: inline-block;
-		padding: 1.5rem 2.2rem;
-		font-size: 2rem;
-		font-weight: 300;
 		text-transform: uppercase;
 		text-decoration: none;
 		background-color: #ff6033;

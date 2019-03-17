@@ -1,11 +1,10 @@
 // <a> LINK BUTTON
 .link-button {
-  padding: 1.2rem 3.6rem;
-  margin-top: 4rem;
-  font-size: 2rem;
-  font-weight: 300;
+  display: inline-block;
+  padding: 1.5rem 2.2rem 1rem;
+  font-size: 1.9rem;
+  font-weight: 700;
   text-transform: uppercase;
   color: $creamy-color;
-  background-color: #5585a2;
   box-shadow: 0 .2rem .5rem rgba(0,0,0,0.5);
 }

@@ -21,8 +21,6 @@
 
   //, <h2> HEADING
   &__heading {
-    font-size: 8rem;
-    font-weight: 700;
     margin-bottom: 2rem;
     @media(max-width: em(500)) {
       font-size: 6.5rem;
@@ -131,8 +129,9 @@
     height: 100%;
   }
 
-  //. <a>
-  &__view-more {}
-
-
+  //. <a> 
+  &__link-button {
+    background-color: #5585a2;
+    margin-top: 4rem;
+  }
 }

@@ -98,11 +98,13 @@
 
   // <h2>
   &__heading {
+    // padding: 2rem;
+    font-size: 10rem;
     position: relative;
     z-index: 1;
     transform: translateY(-50%);
-    font-size: 7rem;
     color: $creamy-color;
+    // background-color: rgba(orange, .7);
     text-align: center;
     @media(max-width: em(600)) {
       font-size: 6rem;

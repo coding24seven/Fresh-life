@@ -23,6 +23,18 @@ body {
   color: $text-color;
 }
 
+/// HEADINGS
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+/// PARAGRAPHS
+p {
+  font-size: 2.2rem;
+}
+
 /// <a>
 a {
   text-decoration: none;
@@ -33,6 +45,11 @@ a {
 input, textarea {
   font-family: inherit;
   outline: none;
+}
+
+/// SECTION
+section {
+  position: relative;
 }
 
 /// CONTAINER
