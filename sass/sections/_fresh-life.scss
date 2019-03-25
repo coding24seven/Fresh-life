@@ -8,11 +8,11 @@
 		min-height: 100vh;
 		padding-top: 1.5rem;
 		padding-bottom: 5.5rem;
-		background: url(/img/092.jpg) right center no-repeat;
+		background: url(../img/092.jpg) right center no-repeat;
 		background-size: cover;
 		display: block;
 		@media(max-width: em(900)) {
-			background: url("img/092-cropped.jpg") top center no-repeat;
+			background: url("../img/092-cropped.jpg") top center no-repeat;
 			background-size: cover;
 		}
 	}

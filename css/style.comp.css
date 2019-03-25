@@ -355,7 +355,7 @@ section {
     background-color: #f72b3b; }
 
 .contact {
-  background: url(img/007.jpg) center center no-repeat;
+  background: url(../img/007.jpg) center center no-repeat;
   background-size: cover; }
   .contact__container {
     display: block;
@@ -520,12 +520,12 @@ section {
     min-height: 100vh;
     padding-top: 1.5rem;
     padding-bottom: 5.5rem;
-    background: url(/img/092.jpg) right center no-repeat;
+    background: url(../img/092.jpg) right center no-repeat;
     background-size: cover;
     display: block; }
     @media (max-width: 56.25em) {
       .fresh-life__container {
-        background: url("img/092-cropped.jpg") top center no-repeat;
+        background: url("../img/092-cropped.jpg") top center no-repeat;
         background-size: cover; } }
   .fresh-life__text-and-link-box {
     margin-top: 10rem;
@@ -754,12 +754,12 @@ section {
 .subscribe__container {
   padding-top: 8rem;
   padding-bottom: 12rem;
-  background: url(img/046.png) right center no-repeat;
+  background: url(../img/046.png) right center no-repeat;
   background-size: contain; }
   @media (max-width: 50em) {
     .subscribe__container {
       padding-top: 12rem;
-      background: url(img/046-cropped.jpg) right center no-repeat;
+      background: url(../img/046-cropped.jpg) right center no-repeat;
       background-size: contain;
       color: white; } }
   @media (max-width: 34.375em) {
