@@ -931,7 +931,7 @@ section {
 @media (max-width: 56.25em) {
   /* line 7, sass/sections/_fresh-life.scss */
   .fresh-life__container {
-    background: url("/img/092-cropped.jpg") top center no-repeat;
+    background: url("../img/092-cropped.jpg") top center no-repeat;
     background-size: cover;
   }
 }
