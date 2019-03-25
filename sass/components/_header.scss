@@ -71,7 +71,7 @@
     color: $blackish-color;
     @media (max-width: $bp-burger) {
       margin: 0;
-      padding: 1rem 2rem 0.6rem;
+      padding: 1.4rem 2rem 1rem;
       border-bottom: 0.1rem solid rgb(182, 182, 182);
     }
     &:hover {

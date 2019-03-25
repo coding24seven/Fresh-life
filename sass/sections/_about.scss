@@ -1,6 +1,12 @@
 /// <section> ABOUT
 .about {
-  background-image: radial-gradient(circle at center, #00c3c3 0%, #00b8b7 32%, #00afae 68%, #009f9f 100%);
+  background-image: radial-gradient(
+    circle at center,
+    #00c3c3 0%,
+    #00b8b7 32%,
+    #00afae 68%,
+    #009f9f 100%
+  );
 
   //. <div> CONTAINER SPECIFIC
   &__container {
@@ -9,9 +15,9 @@
     padding-bottom: 7rem;
     justify-content: space-between;
     align-items: center;
-    @media(max-width: em(900)){
+    @media (max-width: em(900)) {
       padding-top: 5rem;
-      padding-bottom:11rem;
+      padding-bottom: 11rem;
       flex-direction: column;
     }
   }
@@ -19,23 +25,19 @@
   //, <img> IMAGE
   &__image {
     width: 45%;
-    height: 45%;
-    filter: drop-shadow(-1.3794rem .684rem 5rem rgba(black,0.3));
+    filter: drop-shadow(-1.3794rem 0.684rem 5rem rgba(black, 0.3));
     margin-right: 10rem;
-    @media(max-width: em(900)) {
+    @media (max-width: em(900)) {
       width: 65%;
-      height: 65%;
       margin-top: 4rem;
       margin-right: 0;
       order: 2;
     }
-    @media(max-width: em(500)) {
+    @media (max-width: em(500)) {
       width: 85%;
-      height: 85%;
     }
-    @media(max-width: em(359)) {
+    @media (max-width: em(359)) {
       width: 88%;
-      height: 88%;
     }
   }
 
@@ -46,11 +48,10 @@
     flex-direction: column;
     justify-content: center;
     color: $creamy-color;
-    @media(max-width: em(900)) {
+    @media (max-width: em(900)) {
       width: 100%;
     }
-    @media(max-width: em(500)) {
-
+    @media (max-width: em(500)) {
     }
   }
 
@@ -59,10 +60,10 @@
     text-align: center;
     transform: translateX(-3rem); // correct uncentered heading
     margin-bottom: 1.6rem;
-    @media(max-width: em(1150)) {
+    @media (max-width: em(1150)) {
       transform: translateX(-2rem);
     }
-    @media(max-width: em(900)) {
+    @media (max-width: em(900)) {
       transform: translateX(0);
     }
   }
