@@ -5,11 +5,11 @@
   &__container {
     padding-top: 8rem;
     padding-bottom: 12rem;
-    background: url(/img/046.png) right center no-repeat;
+    background: url(img/046.png) right center no-repeat;
     background-size: contain;
     @media(max-width: em(800)) {
       padding-top: 12rem;
-      background: url(/img/046-cropped.jpg) right center no-repeat;
+      background: url(img/046-cropped.jpg) right center no-repeat;
       background-size: contain;
       color: white;
     }
