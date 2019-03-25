@@ -5,7 +5,7 @@
   /// CONTAINER
   .container {
     padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-bottom: 11rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +71,7 @@
     background: linear-gradient(
       to top,
       black,
-      transparent 47%
+      transparent 51%
     );
   }
 
@@ -82,7 +82,7 @@
     text-align: center;
     line-height: 1;
     border-radius: 10%;
-    background-color: rgba($text-color, .6);
+    background-color: rgba($blackish-color, .6);
 
     &--day {
       font-size: 3.2rem;
@@ -102,17 +102,19 @@
     }
   }
 
-  // <h4> TITLE
+  // <h4> TITLE OF EACH BLOG POST
   &__title {
-    font-size: 2rem;
+    font-size: 2.6rem;
+    letter-spacing: .1rem;
+    line-height: 1.1;
     font-weight: 700;
     cursor: pointer;
-    transition: .3s .03s;
+    transition: .03s .03s;
     @media(max-width: em(359)) {
       font-size: 1.7rem;
     }
     &:hover {
-      transform: skewX(-10deg);
+      transform: skewX(-3deg) scale(1.03);
     }
   }
 
@@ -130,8 +132,6 @@
       transition: .3s .03s;
       &:hover {
         color: #f72b3b;
-        letter-spacing: .03rem;
-        // transform: scaleX(2);
       }
     }
   }

@@ -1,113 +1,119 @@
 /// <section> SERVICES
 .services {
-  background-color: #70bfff;
+	background-color: #70bfff;
 
-  //. <div>
-  &__container {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    justify-content: space-between;
-    align-items: center;
-    @media(max-width: em(1000)) {
-      flex-direction: column;
+	//. <div>
+	&__container {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: em(1000)) {
+			flex-direction: column;
+		}
+		@media(max-width: em(380)) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	//, <div> ALL OPTIONS
+	&__options {
+		margin-right: 10%;
+		flex: 0 0 44%;
+		@media (max-width: em(1000)) {
+			order: 1;
+			margin: 0;
+		}
+	}
 
-    }
+	// <a> BOX FOR OPTION TEXT AND ICON
+	&__box {
+		height: 9rem;
+		margin-bottom: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: white;
+		box-shadow: 0 .4rem 1rem rgba(black, 0.5);
+		cursor: pointer;
+		transition: all .2s .02s ease-in;
+  }
+  &__box:hover &__icon {
+    fill: #fe541d;
   }
 
-  //, <div> ALL OPTIONS
-  &__options {
-    margin-right: 10%;
-    flex: 0 0 44%;
-    @media(max-width: em(1000)) {
-      order: 1;
-      margin: 0;
-    }
-  }
+	// <h3> TEXT OPTION such as 'online shopping'
+	&__option {
+		padding: 0 4rem;
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+		flex: 1;
+		@media(max-width: em(359)) {
+			padding: 0 1rem;
+		}
+	}
 
-  // <a> BOX FOR OPTION TEXT AND ICON
-  &__box {
-    height: 9rem;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    box-shadow: 0 .4rem 1rem rgba(black,0.5);
-    cursor: pointer;
-    transition: all .2s .02s ease-in;
-    &:hover {
-      background-color: #009af4;
-      filter: invert(100%);
-    }
-  }
+	// <div> ICON WRAPPER
+	&__icon-wrapper {
+		align-self: stretch;
+		border-left: 2px solid gray;
+		width: 9rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-  // <h3> TEXT OPTION such as 'online shopping'
-  &__option {
-    padding: 0 4rem;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    flex: 1;
-  }
+	// <svg> ICON such as a shopping cart
+	&__icon {
+		width: 4.7rem;
+		height: 4.4rem;
+		fill: $blackish-color;
+	}
 
-  // <div> ICON WRAPPER
-  &__icon-wrapper {
-    align-self: stretch;
-    border-left: 2px solid gray;
-    width: 9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  // <img> ICON such as a shopping cart
-  &__icon {}
+	//, <div> BOX FOR IMAGE AND HEADING
+	&__image-box {
+		position: relative;
+		@media (max-width: em(1000)) {
+			margin: 18rem 0;
+		}
+		@media (max-width: em(500)) {
+			margin: 12rem 0 14rem;
+		}
+		@media (max-width: em(360)) {
+			margin: 6rem 0 9rem;
+		}
+	}
 
-  //, <div> BOX FOR IMAGE AND HEADING
-  &__image-box {
-    position: relative;
-    @media(max-width: em(1000)) {
-      margin: 18rem 0;
-    }
-    @media(max-width: em(500)) {
-      margin: 12rem 0 14rem;
-    }
-    @media(max-width: em(360)) {
-      margin: 6rem 0 9rem;
-    }
-  }
+	// <img>
+	&__image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -60%);
+		display: block;
+		width: 39rem;
+		@media (max-width: em(1000)) {
+			width: 35rem;
+		}
+		@media (max-width: em(500)) {
+			width: 32rem;
+		}
+		@media (max-width: em(360)) {
+			width: 26rem;
+		}
+	}
 
-  // <img>
-  &__image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    display: block;
-    width: 39rem;
-    @media(max-width: em(1000)) {
-      width: 35rem;
-    }
-    @media(max-width: em(500)) {
-      width: 32rem;
-    }
-    @media(max-width: em(360)) {
-      width: 26rem;
-    }
-  }
-
-  // <h2>
-  &__heading {
-    // padding: 2rem;
-    font-size: 10rem;
-    position: relative;
-    z-index: 1;
-    transform: translateY(-50%);
-    color: $creamy-color;
-    // background-color: rgba(orange, .7);
-    text-align: center;
-    @media(max-width: em(600)) {
-      font-size: 6rem;
-    }
-  }
+	// <h2>
+	&__heading {
+		font-size: 11rem;
+		position: relative;
+		z-index: 1;
+		transform: translateY(-50%);
+		color: $creamy-color;
+		text-align: center;
+		@media (max-width: em(600)) {
+			font-size: 9rem;
+		}
+	}
 }

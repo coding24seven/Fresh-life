@@ -1,3 +1,9 @@
+/// TEXT SELECTION
+::selection {
+  color: $creamy-color;
+  background-color: #00b8b7;
+}
+
 /// <*>
 * {
   // outline: 1px solid pink;
@@ -20,7 +26,7 @@ html {
 body {
   font-family: $font-family;
   min-height: 100vh; // push down the footer on small-height pages, make 'background-image: linear-gradient' always cover the full height
-  color: $text-color;
+  color: $blackish-color;
 }
 
 /// HEADINGS
@@ -42,7 +48,7 @@ a {
 }
 
 /// INPUT, TEXTAREA
-input, textarea {
+input, textarea, button {
   font-family: inherit;
   outline: none;
 }

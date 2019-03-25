@@ -11,12 +11,8 @@
     align-items: center;
     @media(max-width: em(900)){
       padding-top: 5rem;
-      padding-bottom: 5rem;
+      padding-bottom:11rem;
       flex-direction: column;
-    }
-    @media(max-width: em(700)){
-      padding-top: 3rem;
-      padding-bottom: 3rem;
     }
   }
 
@@ -61,13 +57,13 @@
   // <h2>
   &__heading {
     text-align: center;
-    transform: translateX(-4rem);
+    transform: translateX(-3rem); // correct uncentered heading
     margin-bottom: 1.6rem;
-    @media(max-width: em(1300)) {
-      font-size: 6rem;
+    @media(max-width: em(1150)) {
+      transform: translateX(-2rem);
     }
-    @media(max-width: em(500)) {
-      font-size: 5rem;
+    @media(max-width: em(900)) {
+      transform: translateX(0);
     }
   }
 

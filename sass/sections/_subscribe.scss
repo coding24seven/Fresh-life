@@ -3,8 +3,9 @@
 
   /// <div> CONTAINER
   &__container {
-    padding: 8rem;
-    background: url(/img/046.jpg) right center no-repeat;
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+    background: url(/img/046.png) right center no-repeat;
     background-size: contain;
     @media(max-width: em(800)) {
       padding-top: 12rem;
@@ -23,7 +24,7 @@
     }
   }
 
-  // <form> FORM
+  //. <form> FORM
   &__form {
     width: 60%;
     ::placeholder {
@@ -33,7 +34,7 @@
       width: 40rem;
     }
     @media(max-width: em(800)) {
-      background-color: rgba(blue,0.5);
+      background-color: rgba(150, 185, 44, 0.64);
       margin: 0 auto;
       border-top-left-radius: 11%;
       border-top-right-radius: 11%;
@@ -47,12 +48,10 @@
       margin-bottom: 2rem;;
       padding: 2rem 2rem 0;
       text-align: center;
+      font-size: 6rem;
     }
-    @media(max-width: em(550)) {
-      font-size: 3rem;
-    }
-    @media(max-width: em(359)) {
-      font-size: 2.8rem;
+    @media(max-width: em(400)) {
+      font-size: 5.2rem;
     }
   }
 
@@ -78,11 +77,33 @@
   // <button> BUTTON
   &__button {
     margin: 0;
+    padding: 1.8rem 2rem 1.4rem;
+    transform: translate(.4rem, .15rem);
+    font-size: 1.9rem;
+    text-transform: uppercase;
     color: white;
     background-color: #96b92c;
+    font-weight: 400;
+    border: none;
     cursor: pointer;
+    transition: .1s .02s;
+    &:hover {
+      background-color: #6f9400;
+    }
+    &:hover * {
+      transform: scale(1.03);
+    }
+
+    &:active {
+      background-color: #40485b;
+    }
     @media(max-width: em(900)) {
       width: 100%;
+      transform: translate(0);
+    }
+
+    & > span {
+      display: inline-block;
     }
   }
 }

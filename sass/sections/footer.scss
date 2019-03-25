@@ -1,9 +1,9 @@
-// FOOTER
+// <section> FOOTER
 .footer {
-  background-color: $text-color;
+  background-color: $blackish-color;
   color: $creamy-color;
 
-  /// CONTAINER
+  /// <div> CONTAINER
   &__container {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
@@ -16,19 +16,19 @@
     }
   }
 
-  //. COPYRIGHT ITEM
+  //. <div> COPYRIGHT ITEM
   &__copyright {
     font-size: 1.6rem;
     font-weight: 300;
   }
 
-  //. BRAND ITEM
+  //. <a> BRAND ITEM
   &__brand {
     font-size: 2.5rem;
-    font-family: $font-brand;
+    font-family: $font-family-brand;
   }
 
-  //. AUTHOR ITEM
+  //. <div> AUTHOR ITEM
   &__author {
     text-align: right;
     font-size: 1.5rem;

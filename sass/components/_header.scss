@@ -9,22 +9,31 @@
 
   //. <h1> BRAND NAME
   &__brand {
-    font-family: $font-brand;
+    font-family: $font-family-brand;
     font-size: 5rem;
     font-weight: 400;
-    color: $text-color;
+    color: $blackish-color;
 
-    @media(max-width: em(1300)) {
+    @media (max-width: em(1300)) {
       font-size: 4.4rem;
     }
   }
 
-  //. CHECKBOX FOR NAVIGATION MENU
+  //. INVISIBLE CHECKBOX FOR NAVIGATION MENU + SELECT SIBLING BURGER
   &__checkbox {
     display: none;
   }
+  // DISPLAY A SMALL MENU WHEN CHECKBOX CHECKED
   &__checkbox:checked ~ &__navbar {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+  // CROSS THE BARS OF BURGER WHEN CHECKBOX CHECKED
+  &__checkbox:checked ~ .burger {
+    @include cross-burger-bars;
+    &:hover {
+      @include scale-up-crossed-bars;
+    }
   }
 
   //. <nav> NAVIGATION BAR
@@ -33,10 +42,16 @@
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
+    transition: 0.2s;
 
-    @media(max-width: $bp-burger) {
-      display: none;
+    // will show up when the checkbox above is checked
+    @media (max-width: $bp-burger) {
+      // hide
+      visibility: hidden;
+      overflow: hidden;
+      opacity: 0;
+      //
       position: absolute;
       z-index: 666;
       top: 6rem;
@@ -49,31 +64,50 @@
 
   //, <a> LINKS
   &__link {
-    padding: 0.4rem 0.3rem;
+    padding: 1rem 0.3rem 0.6rem;
     margin: 0 1.6rem;
+    position: relative;
     text-decoration: none;
-    color: $text-color;
-    transition: all .2s $hover-delay;
-    border-top: .2rem solid transparent;
-    border-bottom: .2rem solid transparent;
-    @media(max-width: $bp-burger) {
+    color: $blackish-color;
+    @media (max-width: $bp-burger) {
       margin: 0;
-      padding: .5rem 2rem;
-      box-shadow: 0 .1rem rgb(182, 182, 182);
+      padding: 1rem 2rem 0.6rem;
+      border-bottom: 0.1rem solid rgb(182, 182, 182);
     }
     &:hover {
-      // HOVER WHEN IN NAVBAR MODE
-      box-shadow: 0 .1rem transparent;
-      border-top: .2rem solid #ff6033;
+      // HOVER WHEN IN NAVBAR AND MENU MODE
+      &::before {
+        transform-origin: left;
+        transform: scaleX(1);
+        transition: transform 0.3s $hover-delay;
+      }
       // HOVER WHEN IN MENU MODE
-      @media(max-width: $bp-burger) {
-        border-top: .2rem solid transparent;
-        border-bottom: .2rem solid #ff6033;
+      @media (max-width: $bp-burger) {
+        // remove border from view just in case the ::after/::before border does not overlap it
+        border-bottom: 0.1rem solid transparent;
       }
     }
     &:last-child {
       margin-right: 0;
     }
 
+    &::before {
+      padding: inherit;
+      position: absolute;
+      top: -0.2rem;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      content: "\00a0";
+      border-top: 0.2rem solid #ff6033;
+      transition: transform 0.18s;
+      transform-origin: right;
+
+      @media (max-width: $bp-burger) {
+        top: -0.1rem;
+        border-top: none;
+        border-bottom: 0.2rem solid #ff6033;
+      }
+    }
   }
 }

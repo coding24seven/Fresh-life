@@ -6,7 +6,8 @@
   //. <div> CONTAINER
   &__container {
     display: block;
-    padding: 7rem 8rem;
+    padding-top: 7rem;
+    padding-bottom: 11rem;
     overflow: auto; // so its height grows to contain floated elements
     @media(max-width: em(500)) {
       padding-left: 4rem;
@@ -68,15 +69,6 @@
       background-color: rgba($contact-form__background-color, .5);
       font-size: 1.6rem;
       border: none;
-      // BUTTON
-      &:last-child {
-        margin-bottom: 0;
-        background-color: rgba($contact-form__background-color, .8);
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-        font-weight: bold;
-        cursor: pointer;
-      }
     }
   }
 
@@ -94,6 +86,33 @@
   &__message {
     height: 14rem;
     padding: 1.4rem 2rem;
+  }
+
+  // SUBMIT BUTTON
+  &__submit {
+    margin-bottom: 0;
+    padding-top: .2rem;
+    background-color: rgba($contact-form__background-color, .8);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: .3rem;
+    transition: .05s 0.02s;
+    box-shadow: 0 .2rem .5rem rgba(black, .3);
+    &:hover {
+      background-color: rgba(4, 161, 161, 0.8);
+    }
+    &:active {
+      background-color: rgba(4, 161, 161, 1);
+      transform: translateY(.2rem);
+      box-shadow: 0 0 .5rem rgba(black, .3);
+    }
+    &:hover > span {
+      transform: scale(1.03);
+    }
+    & > span {
+      display: inline-block;
+    }
   }
 
   //, <div> INFO BOX FOR: ADDRESS, EMAIL, PHONE
@@ -147,5 +166,10 @@
   &__value {
     font-size: 1.8rem;
     font-weight: 300;
+  }
+
+  // SCROLL TO TOP LINK
+  &__scroll-link {
+    TODO: change color of the mouse icon to white
   }
 }

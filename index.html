@@ -14,9 +14,21 @@
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 
   <!-- TEXT FONT -->
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Josefin+Slab:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- FAVICON FROM realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FAVICON END-->
 </head>
 
 <body>
@@ -28,13 +40,24 @@
       <!--, HEADER WITH NAVABAR  -->
       <div class="header">
         <h1 class="header__brand"><a href="/">Cahee</a></h1>
-        <label for="toggle-navbar" class="burger" href="#">
+
+        <!-- CHECKBOX FOR MENU ON/OFF -->
+        <input
+          class="header__checkbox"
+          id="i-toggle-navbar"
+          type="checkbox">
+
+        <!-- HAMBURGER TO TOGGLE CHECKBOX ON/OFF -->
+        <label class="burger" for="i-toggle-navbar">
           <div>&horbar;</div>
           <div>&horbar;</div>
           <div>&horbar;</div>
         </label>
-        <input class="header__checkbox" type="checkbox" id="toggle-navbar">
-        <nav class="header__navbar">
+
+        <!-- NAVBAR MENU -->
+        <nav
+          class="header__navbar"
+          onclick="getElementById('i-toggle-navbar').checked=false">
           <a href="#" class="header__link">Home</a>
           <a href="#about" class="header__link">About</a>
           <a href="#services" class="header__link">Services</a>
@@ -48,7 +71,7 @@
       <div class="fresh-life__text-and-link-box">
         <h2 class="fresh-life__heading">Fresh Life</h2>
         <p class="fresh-life__description description">Treat yourself today and splash out on that which matters the most. Your health.</p>
-        <a href="#services" class="fresh-life__link link-button">Get Free Now</a>
+        <a href="#subscribe" class="fresh-life__link link-button">Start Free Now</a>
       </div>
 
     </div> <!-- CONTAINER ENDS -->
@@ -69,57 +92,80 @@
 
       <div class="about__text-box">
         <h2 class="about__heading">About Us</h2>
-        <p class="about__description description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod fugiat dignissimos
-          voluptate eius deserunt, temporibus soluta, accusantium ab eum beatae voluptatibus illo dolor.</p>
-        <p class="about__description description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero dolorum expedita
-          accusamus at, doloribus illum voluptatem. Quod laboriosam provident odit.</p>
+        <p class="about__description description">An organic goods delivery service, this year we've been ranked as one of the top startups in your area. Try us out and you won't regret!</p>
+        <p class="about__description description">We also have a coupon program where you can sign up, recommend us to your friends and family, and earn some juicy points you can convert into free carrots. Yes, they're for real. Just like the velvet ribbon on the package you'll receive from us.</p>
       </div>
 
-      <!--, SCROLL LINK -->
-      <a class="scroll-link" href="#services">
-        <img class="scroll-link__icon" src="img/093.png" alt="scroll down">
-      </a>
     </div> <!-- CONTAINER ENDS -->
+
+    <!--, SCROLL LINK -->
+    <a class="scroll-link" href="#services">
+      <img class="scroll-link__icon" src="img/093.png" alt="scroll down">
+    </a>
   </section>
 
   <!--/ SERVICES  -->
-
   <section class="services" id="services">
     <div class="services__container container">
 
       <div class="services__options">
+
+        <a class="services__box">
+          <div class="services__option">Quality Products</div>
+          <div class="services__icon-wrapper">
+            <svg class="services__icon">
+              <use
+                xlink:href="/img/vector-graphics.svg#icon-product">
+              </use>
+            </svg>
+          </div>
+        </a>
+
         <a class="services__box">
           <div class="services__option">Online Shopping</div>
           <div class="services__icon-wrapper">
-            <img class="services__icon" src="/img/084.png"></img>
+            <svg class="services__icon">
+              <use
+                xlink:href="/img/vector-graphics.svg#icon-shopping-cart">
+              </use>
+            </svg>
           </div>
         </a>
-        <a class="services__box">
-          <div class="services__option">Quality Product</div>
-          <div class="services__icon-wrapper">
-            <img class="services__icon" src="/img/080.png"></img>
-          </div>
-        </a>
+
         <a class="services__box">
           <div class="services__option">Domestic & International<br>Delivery</div>
           <div class="services__icon-wrapper">
-            <img class="services__icon" src="/img/076.png"></img>
+            <svg class="services__icon">
+              <use
+                xlink:href="/img/vector-graphics.svg#icon-globe">
+              </use>
+            </svg>
           </div>
         </a>
         <a class="services__box">
-          <div class="services__option">Well Organized</div>
+          <div class="services__option">Dietary Recommendations</div>
           <div class="services__icon-wrapper">
-            <img class="services__icon" src="/img/072.png"></img>
+            <svg class="services__icon">
+              <use
+                xlink:href="/img/vector-graphics.svg#icon-carrot">
+              </use>
+            </svg>
           </div>
         </a>
       </div>
 
       <div class="services__image-box">
         <img src="/img/085.png" alt="tomatoes" class="services__image">
-        <h2 class="services__heading">Our Services</h2>
+        <h2 class="services__heading">Our Offer</h2>
       </div>
 
-    </div>
+    </div> <!-- CONTAINER ENDS -->
+
+    <!--, SCROLL LINK -->
+    <a class="scroll-link" href="#gallery">
+      <img class="scroll-link__icon" src="img/093.png" alt="scroll down">
+    </a>
+
   </section>
 
   <!--/ GALLERY  -->
@@ -130,7 +176,7 @@
       <!-- HEADING AND DESCRIPTION -->
       <div class="gallery__intro-box">
         <h2 class="gallery__heading">Gallery</h2>
-        <p class="gallery__description description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur inventore amet fuga vero nobis aperiam consequuntur voluptates. Consequatur inventore cumque debitis ea.</p>
+        <p class="gallery__description description">Watch our treats in action. We're keeping more than just a few slices of that goodness for you. What are you waiting for? Give us a call now to enjoy all that and more.</p>
       </div>
 
       <!-- ALL PHOTOS BOX -->
@@ -160,32 +206,42 @@
       </div> <!-- ALL PHOTOS BOX ENDS -->
 
       <!-- VIEW MORE LINK-BUTTON -->
-      <a href="#" class="gallery__link-button link-button">View More</a>
+      <a href="#gallery" class="gallery__link-button link-button">View Again</a>
 
     </div> <!-- CONTAINER ENDS -->
+
+    <!--, SCROLL LINK -->
+    <a class="scroll-link" href="#subscribe">
+      <img class="scroll-link__icon" src="img/093.png" alt="scroll down">
+    </a>
   </section>
 
   <!--/ SUBSCRIBE -->
-  <section class="subscribe">
+  <section class="subscribe" id="subscribe">
     <div class="subscribe__container container">
-      <form class="subscribe__form" method="POST">
+      <form class="subscribe__form" method="GET" action="#subscribe">
         <label for="email" class="subscribe__label">
           <h2 class="subscribe__heading">Subscribe to Us</h2>
-          <p class="subscribe__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, itaque quod reiciendis ipsam, error tempore quasi necessitatibus.</p>
+          <p class="subscribe__description description">We will keep you in the picture so you don't miss out on the latest additions to our trendy diet!</p>
         </label>
-        <input class="subscribe__input" id="email" placeholder="Your email address" type="text" spellcheck="false">
-        <button class="subscribe__button link-button">Subscribe</button>
+        <input class="subscribe__input" id="email" placeholder="Your email address" type="email" spellcheck="false" required>
+        <button class="subscribe__button"><span>Subscribe</span></button>
       </form>
-    </div>
+    </div> <!-- CONTAINER ENDS -->
+
+    <!--, SCROLL LINK -->
+    <a class="scroll-link" href="#blog">
+      <img class="scroll-link__icon" src="img/093.png" alt="scroll down">
+    </a>
   </section>
 
   <!--/ BLOG -->
-  <section class="blog">
+  <section class="blog" id="blog">
     <div class="blog__container container">
 
       <!-- BLOG INTRO -->
       <h2 class="blog__heading">Blog</h2>
-      <p class="blog__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse magni porro? Autem repellat itaque eaque facere nisi! Nam libero duptus extremus iusto explicabo.</p>
+      <p class="blog__description description">Get some new ideas from our daily blog.<br>Vote for the best of them!</p>
 
       <!-- BLOG PHOTOS -->
       <div class="blog__all-photos-box">
@@ -232,7 +288,7 @@
             <h4 class="blog__title">Pesticides & Food: What You Need to Know</h4>
             <div class="blog__author">
               <span class="blog__author--by">By </span>
-              <span class="blog__author--nickname">SprayMaster</span>
+              <span class="blog__author--nickname">SprayMonger</span>
               <span class="blog__author--active-ago"> - 8 hours ago</span>
             </div>
           </figcaption>
@@ -241,13 +297,18 @@
       </div>
 
       <!-- VIEW MORE LINK-BUTTON -->
-      <a href="#" class="blog__link-button link-button">View More</a>
+      <a href="#blog" class="blog__link-button link-button">View Again</a>
 
-    </div>
+    </div> <!-- CONTAINER ENDS -->
+
+    <!--, SCROLL LINK -->
+    <a class="scroll-link" href="#contact">
+      <img class="scroll-link__icon" src="img/093.png" alt="scroll down">
+    </a>
   </section>
 
   <!--/ CONTACT -->
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="contact__container container">
 
       <!-- HEADING AND DESCRIPTION -->
@@ -255,12 +316,12 @@
       <p class="contact__description description">Get in touch with us if you require any assistance.<br>We strive to respond within 24 hours.</p>
 
       <!-- FORM -->
-      <form action="" class="contact__form" method="POST" spellcheck="false">
-        <input type="text" class="contact__name contact__input" placeholder="Your name">
-        <input type="text" class="contact__email contact__input" placeholder="Your email">
-        <input type="text" class="contact__phone contact__input" placeholder="Your phone number">
-        <textarea class="contact__message contact__input" placeholder="Your message "></textarea>
-        <button class="contact__submit">Send</button>
+      <form action="#contact" class="contact__form" method="GET" spellcheck="false">
+        <input type="text" class="contact__name contact__input" placeholder="Your name" required>
+        <input type="email" class="contact__email contact__input" placeholder="Your email" required>
+        <input type="text" class="contact__phone contact__input" placeholder="Your phone number" required>
+        <textarea class="contact__message contact__input" placeholder="Your message" required></textarea>
+        <button class="contact__submit"><span>Send</span></button>
       </form>
 
       <!-- INFO: ADDRESS, EMAIL, PHONE, ETC -->
@@ -283,15 +344,20 @@
 
       </div>
 
-    </div>
+    </div> <!-- CONTAINER ENDS -->
+
+    <!--, SCROLL LINK TO TOP -->
+    <a class="contact__scroll-link scroll-link" href="#">
+      <img class="scroll-link__icon" src="img/093-white.png" alt="scroll down">
+    </a>
   </section>
 
   <!--/ FOOTER -->
-  <section class="footer">
+  <section class="footer" id="footer">
     <div class="footer__container container">
-      <div class="footer__copyright footer__item">&copy; 2019. All rights reserved</div>
-      <div class="footer__brand footer__item">Cahee</div>
-      <div class="footer__author footer__item">Made by the Maker</div>
+      <div class="footer__copyright footer__item">&copy; 2019 AW. All rights reserved</div>
+      <a class="footer__brand footer__item" href="/">Cahee</a>
+      <div class="footer__author footer__item">Designed by Intelligent Designer</div>
     </div>
   </section>
 

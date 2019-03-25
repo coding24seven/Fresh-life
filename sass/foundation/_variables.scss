@@ -3,25 +3,21 @@
 :root {
   // --line: 1px solid var(--color-grey-light-2); // example
 }
-/// sass variables
+/// SASS VARIABLES
 //. FONT
-$font-brand: 'Pacifico', cursive;
-
-$font-family: 'Josefin Sans', sans-serif;
+$font-family-brand: 'Pacifico', cursive;
 $font-family-heading: 'Amatic SC', cursive;
+$font-family: 'Josefin Sans', sans-serif;
 
 $font-size: 62.5%;
 
 //. COLOR
-$text-color: #262626;
+$blackish-color: #262626;
 $creamy-color: #f9f8fb;
 $contact-form__background-color: #00c4c4;
 
 //. CONTAINER
 $container-width: 117rem;
-
-//. FRESH LIFE
-$fresh-life-height: 100rem;
 
 //. HOVER DELAY
 $hover-delay: .03s;
@@ -32,3 +28,4 @@ $hover-delay: .03s;
  }
  //. BURGER
  $bp-burger: em(900);
+
