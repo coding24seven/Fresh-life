@@ -10,6 +10,7 @@
     padding-bottom: 11rem;
     overflow: auto; // so its height grows to contain floated elements
     @media(max-width: em(500)) {
+      padding-top: 4rem;
       padding-left: 4rem;
       padding-right: 4rem;
     }

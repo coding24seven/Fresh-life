@@ -28,11 +28,13 @@
     visibility: visible;
     opacity: 1;
   }
+
   // CROSS THE BARS OF BURGER WHEN CHECKBOX CHECKED
   &__checkbox:checked ~ .burger {
     @include cross-burger-bars;
     &:hover {
-      @include scale-up-crossed-bars;
+      //TODO: comment out on touchscreens
+      // @include thicken-crossed-bars;
     }
   }
 

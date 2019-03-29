@@ -8,7 +8,10 @@
 		padding-bottom: 11rem;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+    align-items: center;
+    @media (max-width: em(500)) {
+      padding-top: 3rem;
+    }
 	}
 
 	//. <div> BOX FOR HEADING AND DESCRIPTION

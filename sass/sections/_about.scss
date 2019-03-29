@@ -20,6 +20,9 @@
       padding-bottom: 11rem;
       flex-direction: column;
     }
+    @media (max-width: em(500)) {
+      padding-top: 3rem;
+    }
   }
 
   //, <img> IMAGE

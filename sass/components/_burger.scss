@@ -1,64 +1,84 @@
 ///
+/// VARIABLES
+$bar-height: 5px; // height of each burger bar
+$space-between-bars: 8px; // vertical gap between bars
+
+///
 /// MIXINS
 //. CROSS THE BARS OF THE BURGER
 @mixin cross-burger-bars {
-  &>div:nth-child(1) {
-    transform: translateY(1.06rem) rotate(135deg);
+  & > svg:nth-child(1) {
+    transform: translateY($bar-height) rotate(135deg);
   }
-  &>div:nth-child(2) {
+  & > svg:nth-child(2) {
     transform: scale(0);
   }
-  &>div:nth-child(3) {
-    transform: translateY(-1.06rem) rotate(-135deg);
+  & > svg:nth-child(3) {
+    transform: translateY(-$bar-height) rotate(-135deg);
   }
 }
-//. SIZE UP THE CROSSED BARS OF THE BURGER
-@mixin scale-up-crossed-bars {
-  &>div:nth-child(1) {
-    transform: scale(1.2) translateY(.9rem) rotate(135deg);
+//. THICKEN THE CROSSED BARS OF THE BURGER (for non-touchscreen only)
+@mixin thicken-crossed-bars {
+  & > svg:nth-child(1) {
+    line {
+      stroke-width: calc(#{$bar-height} + 2px);
+    }
   }
-  &>div:nth-child(3) {
-    transform: scale(1.2) translateY(-.9rem) rotate(-135deg);
+  & > svg:nth-child(3) {
+    line {
+      stroke-width: calc(#{$bar-height} + 2px);
+    }
   }
 }
 
-//. SHRINK THE BURGER VERTICALLY
+//. SHRINK THE BURGER VERTICALLY (for non-touchscreen only)
 @mixin shrink-burger {
-  &>div:nth-child(1) {
-    transform: translateY(.2rem);
+  & > svg:nth-child(1) {
+    transform: translateY(calc(#{$space-between-bars} / -2));
   }
-  &>div:nth-child(3) {
-    transform: translateY(-.2rem);
+  & > svg:nth-child(3) {
+    transform: translateY(calc(#{$space-between-bars} / 2));
+  }
+}
+
+//. GIVE BURGER ITS STARTING NEUTRAL LOOK
+@mixin normalize-burger {
+  // <svg> top bar of hamburger
+  & > svg:nth-child(1) {
+    transform: translateY(-$space-between-bars);
+  }
+  // <svg> bottom bar of hamburger
+  & > svg:nth-child(3) {
+    transform: translateY($space-between-bars);
   }
 }
 
 ///
-/// <div> || <a> || <label> BURGER LINK
+/// <div> || <a> || <label> BURGER
 .burger {
   display: none;
-  transform: translate(1rem, -15%);
-  // width and height below are for 'background-lines' version of burger
-  // width: 3rem;
-  // height: 2.13rem;
-  // position: relative;
-  padding: 1rem;
+  transform: translate(1rem, -15%); // reposition the burger on page
+  padding: calc(#{$space-between-bars} * 2) 1rem; // give clickable size to burger as originally is has the size of the middle bar only
   cursor: pointer;
   user-select: none;
-  text-decoration: none;
-  transition: all .2s .05s;
+  text-decoration: none; // for a link burger only
 
-  @media(max-width: $bp-burger) {
+  @media (max-width: $bp-burger) {
     display: block;
   }
 
+  // rest the burger bars at starting point
+  @include normalize-burger;
+
   // change burger appearance when it is hovered and the menu is off (.js-menu-on is false )
   &:hover:not(.js-menu-on) {
-    @include shrink-burger;
+    //TODO: comment out on touchscreens
+    // @include shrink-burger;
   }
 
   // change crossed-burger appearance when it is hovered and the menu is on (.js-menu-on is true )
   &:hover.js-menu-on {
-    @include scale-up-crossed-bars;
+    @include thicken-crossed-bars;
   }
 
   // cross 2 bars together and hide 1 bar when burger is clicked and so .js-menu-on added
@@ -66,28 +86,26 @@
     @include cross-burger-bars;
   }
 
-  //. <div> all bars of hamburger
-  &>div {
-    // width and height below are for 'background-lines' version of burger
-    // width: 3rem;
-    // height: .2rem;
-    // background-color: $blackish-color;
-    // border-radius: .3rem;
+  //. <svg> all bars of hamburger
+  & > svg {
+    display: block;
+    height: $bar-height;
+    width: 40px;
 
-    // HTML '&horbar;' version of burger
-    color: $blackish-color;
-    line-height: .3;
-    font-size: 3.7rem;
-    font-weight: 400;
-    // font-family: Arial;
+    line {
+      stroke: black;
+      stroke-width: $bar-height;
+      transition: all 0.09s 0.02s;
+    }
   }
-  //. <div> top and bottom bars of hamburger
-  &>div:nth-child(1),
-  &>div:nth-child(3) {
-    transition: all .09s .02s ease-in-out;
+
+  //. <svg> top and bottom bars of hamburger
+  & > svg:nth-child(1),
+  & > svg:nth-child(3) {
+    transition: all 0.09s 0.02s ease-in-out;
   }
-  //. <div> middle bar of hamburger
-  &>div:nth-child(2) {
-    transition: all .04s .02s;
+  //. <svg> middle bar of hamburger
+  & > svg:nth-child(2) {
+    transition: all 0.04s 0.02s;
   }
 }

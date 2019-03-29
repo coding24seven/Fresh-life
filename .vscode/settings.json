@@ -2,5 +2,5 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#ee9696",
   },
-  "workbench.editor.showTabs": false
+  "workbench.editor.showTabs": true
 }
