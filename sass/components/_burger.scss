@@ -78,7 +78,8 @@ $space-between-bars: 8px; // vertical gap between bars
 
   // change crossed-burger appearance when it is hovered and the menu is on (.js-menu-on is true )
   &:hover.js-menu-on {
-    @include thicken-crossed-bars;
+    //TODO: comment out on touchscreens
+    // @include thicken-crossed-bars;
   }
 
   // cross 2 bars together and hide 1 bar when burger is clicked and so .js-menu-on added

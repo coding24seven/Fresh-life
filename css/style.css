@@ -113,16 +113,6 @@ section {
   transform: translateY(8px);
 }
 
-/* line 23, sass/components/_burger.scss */
-.burger:hover.js-menu-on > svg:nth-child(1) line {
-  stroke-width: calc(5px + 2px);
-}
-
-/* line 28, sass/components/_burger.scss */
-.burger:hover.js-menu-on > svg:nth-child(3) line {
-  stroke-width: calc(5px + 2px);
-}
-
 /* line 10, sass/components/_burger.scss */
 .burger.js-menu-on > svg:nth-child(1) {
   transform: translateY(5px) rotate(135deg);
@@ -138,27 +128,27 @@ section {
   transform: translateY(-5px) rotate(-135deg);
 }
 
-/* line 90, sass/components/_burger.scss */
+/* line 91, sass/components/_burger.scss */
 .burger > svg {
   display: block;
   height: 5px;
   width: 40px;
 }
 
-/* line 95, sass/components/_burger.scss */
+/* line 96, sass/components/_burger.scss */
 .burger > svg line {
   stroke: black;
   stroke-width: 5px;
   transition: all 0.09s 0.02s;
 }
 
-/* line 103, sass/components/_burger.scss */
+/* line 104, sass/components/_burger.scss */
 .burger > svg:nth-child(1),
 .burger > svg:nth-child(3) {
   transition: all 0.09s 0.02s ease-in-out;
 }
 
-/* line 108, sass/components/_burger.scss */
+/* line 109, sass/components/_burger.scss */
 .burger > svg:nth-child(2) {
   transition: all 0.04s 0.02s;
 }
